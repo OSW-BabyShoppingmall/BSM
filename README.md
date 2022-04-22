@@ -72,7 +72,7 @@ cool/warm 페이지 뼈대 구현
 
 <h2>✅Git commit 전략</h2>
 <ul>
-<li>파일이름: 변경된 부분</li>
+<li>변경된 부분</li>
 <br>
 <li><strong>커밋메시지는 영어로 작성하도록 한다</strong></li>
 그 이유는 현업에서도 영어로 하고, 아지즈교수님이 영어를 좋아할 거 같기 때문이다
@@ -82,12 +82,14 @@ cool/warm 페이지 뼈대 구현
 예를 들어 내가 index.html이라는 파일에서 메뉴바를 추가했으면
 
 ```
-git commit -m "index.html:add menubar"
+git add index.html
+git commit -m "add menubar"
 ```
 
 내가 warm.html이라는 파일의 배치를 변경했으면
 ```
-git commit -m "warm.html:change layout"
+git add warm.html
+git commit -m "change layout"
 ```
 이래야 어떤거를 변경했는지 한번에 알 수 있으니<br>
 지켜주기를 바란다
