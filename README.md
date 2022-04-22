@@ -113,7 +113,7 @@ git add .을 하고 commit을 하지말자
 <li>파일을 수정하고 저장한다</li>
 <li>터미널에 git status를 친다</li>
 <li>modified된 파일을 git add한다(git add index.html)</li>
-<li>git commit 전략에 따라 commit 해준다(git commit -m "index.html:change text fontsize")</li>
+<li>git commit 전략에 따라 commit 해준다(git commit -m "change text fontsize")</li>
 <li>원격 저장소에 push해준다(git push origin main)</li>
 <li>오류가 뜨면 git pull origin main을 먼저해주고 다시 git push origin main을 해준다</li>
 
