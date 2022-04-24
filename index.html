@@ -5,8 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Baby Shoppingmall</title>
-
     <style>
+
+        *{
+            padding:0;
+            margin:0;
+        }
+        ul{
+            list-style:none;
+        }
 
 
         .top_left{
@@ -15,23 +22,51 @@
 
         .top_right{
             float:right;
+            text-align:center;
         }
+        .top_right ul{
+            display:inline-flex;
+        }
+        .top_right ul li{
+            width:120px;
+            padding:15px;
+        }
+        .top_right ul li a{
+            color:black;
+            text-decoration:none;
+            
+        }
+
+        .sub-menu{
+            display:none;
+            margin-top:10px;
+           
+        }
+        .top_right ul li:hover  .sub-menu{
+            display:block;
+            position:absolute;
+        }
+        .top_right ul li:hover .sub-menu ul{
+            display:block;
+        }
+        .top_right ul li:hover .sub-menu ul li{
+            padding-right:0px;
+            padding-left:0px;
+            padding-top:10px;
+          
+        }
+
+      
+
+        .dropdown{
+             position:relative;
+        }
+        .dropdown-menu{
+            position:absolute;
+        }
+
+    
         
-
-       ul{
-           list-style-type:none;
-           margin:0;
-           padding:0;
-       }
-
-       li{
-           display:inline-block;
-           text-align:center;
-           padding-right:14px;
-           padding-left:14px;
-           padding-top:16px;
-           padding-bottom:16px;
-       }
 
        a{
            text-decoration:none;
@@ -57,20 +92,46 @@
     <div id="header">
 
         <div class="image">
-            <div class="menu">
+            <div class="menubar">
                 <div class="top_left">
 
-                   <li> <img src="img/logo.png">  </li>
+                   <ul> 
+                       <li> <img src="img/logo.png"> </li> 
+                    </ul>
 
                     </div>
 
                     <div class="top_right">
-
+                            
                         <ul>
-                            <li>Items</li>
-                            <li>Account</li>
-                            <li>Service Center</li>
+                            <li>Items
+                                <div class="sub-menu">
+                                    <ul>
+                                        <li><a href="#">Warm</a></li>
+                                        <li><a href="#">Cool</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>Service Center
+                                <div class="sub-menu">
+                                    <ul>
+                                        <li><a href="#">Notice</a></li>
+                                        <li><a href="#">Q&A</a></li>
+                                        <li><a href="#">Review</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>Account
+                                <div class="sub-menu">
+                                    <ul>
+                                        <li><a href="#">Log In</a></li>
+                                        <li><a href="#">Sign Up</a></li>
+                                    </ul>
+                                </div>
+                            </li>
                         </ul>
+
+                        
                     </div>
                
             </div>
