@@ -97,7 +97,8 @@ git commit -m "change layout"
 <li><strong>git add .을 사용하지 말자</strong></li>
 파일별로 변경사항을 수시로 커밋을 줄거기때문에<br>
 git add .을 하고 commit을 하지말자
-파일별로 하나하나 commit해주자
+파일별로 하나하나 commit해주자<br>
+image file은 git add .을 사용해도 된다
 
 
 
