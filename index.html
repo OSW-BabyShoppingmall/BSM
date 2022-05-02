@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Baby Shoppingmall</title>
-    <link type="text/css" rel="stylesheet" href="indexstyle.css">
+    <link type="text/css" rel="stylesheet" href="test의test의.css">
 </head>
 <body>
 
@@ -20,7 +20,7 @@
             
 
                 <ul> 
-                    <li> <img id="logo" src="img/logo.png"> </li> 
+                    <li> <a href="index.html"><img id="logo" src="img/logo.png"></a> </li> 
                     </ul>
 
             </div>
@@ -65,32 +65,18 @@
         <div class="imagecontainer">
                 
             <div class="image">
-
-                
-
             </div>
-            
-
+        
             <div class="image" style="background-image:url('img/kids3.jpg')">
-                
-               
-
             </div>
             
-
             <div class="image" style="background-image:url('img/kids5.jpg')">
-                
-
             </div>
             
             <div class="image" style="background-image:url('img/kids6.jpg')">
-                
-
             </div>  
-            
-            <div class="image" style="background-image:url('img/kids8.jpg')">
-            
 
+            <div class="image" style="background-image:url('img/kids8.jpg')">
             </div>  
                    
             
@@ -103,6 +89,9 @@
             <input type="radio" name="radio-btn" id="radio4">
             <input type="radio" name="radio-btn" id="radio5">
         </div>
+        <br>
+        <br>
+       
 
         
         <script>
@@ -124,7 +113,7 @@
             if(counter > 5){
                 counter = 1;
             }
-            }, 2000);
+            }, 3500);
         }
         function Movestop(){
             move=false;
@@ -152,15 +141,44 @@
     </script>
 
   </div>
-    <button>1</button>
-    <button>2</button>
-    <button>3</button>
+   
 
 
-    <div id="content"> 
-    </div>
+    <div id="content">
+        
+        <div class="categoryimage">
+
+            <div class="coolimage">
+                <img class="coolimage__img" src="img/kids11.jpg" alt="Bricks">
+                <div class="coolimage__overlay coolimage__overlay--primary">
+                    <div class="coolimage__title">Bricks</div>
+                    <p class="coolimage__description">
+                        Here we have a brick wall.
+                    </p>
+                </div>
+            </div>
+            
+            
+            <br>
+            <br>
+
+            <div class="warmimage">
+                <img class="warmimage__img" src="img/kids10.jpg" alt="Bricks">
+                <div class="warmimage__overlay warmimage__overlay--primary">
+                    <div class="warmimage__title"><a href="notice.html">Bricks</a></div>
+                    <p class="warmimage__description">
+                        Here we have a brick wall.
+                    </p>
+                </div>
+            </div>
+            
+ 
+        </div>
+    </div> 
+  
 
     <div id="footer">
+      
         개발자 소개
         <br>
         계좌번호
