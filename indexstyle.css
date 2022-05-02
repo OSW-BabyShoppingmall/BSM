@@ -7,13 +7,20 @@ ul{
     list-style:none;
 }
 
+.menubar{
+    width:100%;
+    position:fixed;
+    z-index:1;
+}
 
 .top_left{
+    width:70%;
     float:left;
 }
 
 .top_right{
     float:right;
+    width:30%;
     text-align:center;
 }
 .top_right ul{
@@ -74,6 +81,7 @@ a{
    background-repeat:no-repeat;
    background-image:url(img/kids.jpg);
    float:left;
+
 }
 
 /*.image{
