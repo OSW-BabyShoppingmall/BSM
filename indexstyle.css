@@ -15,6 +15,8 @@ ul{
     z-index:1;
 }
 
+/* 상단메뉴바에대한 속성들(시작)*/
+
 .top_left{
     width:70%;
     float:left;
@@ -57,7 +59,7 @@ ul{
   
 }
 
-
+/*상단메뉴바에대한 속성들(끝)*/
 
 
 a{
@@ -66,6 +68,8 @@ a{
 #header{
     overflow:hidden;
 }
+
+/*헤더의 이미지파일들에 관한 속성들(시작)*/
 
 .imagecontainer{
    white-space:nowrap;
@@ -96,25 +100,134 @@ img#logo{
    
 }
 
+/*헤더의 이미지파일들에 관한 속성들(끝)*/
+
+
+
+
+/*메인 콘텐츠 이미지에 관한 속성들(시작)*/
 
 .categoryimage{
-    margin:100px;
+    margin:100px 100px 0px 100px;
 }
 
-.categoryimage{
-    margin:100px;
-}
-
-.coolimage__img,.warmimage__img{
+.mainimage__img{
     width:500px;
     height:500px;
 }
 
+#coolanchor{
+    color:#3509d4
+}
+#coolanchor:visited{
+    color:#3509d4
+}
+
+#warmanchor{
+    color:#fbff02
+}
+#warmanchor:visited{
+    color:#3509d4
+}
+
+/*
 .warmimage{
     float:right;
 }
+*/
+
+/*
+.coolimage__description{
+    display:inline-block;
+    text-align:center;
+}
+*/
+/*
+.coolimage__description{
+    display:inline-block;
+}*/
+
+.mainimage {
+    position: relative;
+    width: 500px;
+}
+.warmimage{
+    position: relative;
+    width: 500px;
+    left:700px;
+}
+
+.mainimage__img {
+    display: block;
+    width: 100%;
+}
+
+.mainimage__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: #ffffff;
+    font-family: 'Quicksand', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.75s;
+}
+
+.mainimage__overlay--blur {
+    backdrop-filter: blur(5px);
+}
+
+/*#009578;
+}*/
+
+.coolimage__overlay--primary {
+    background: #0addb3;
+}
+.warmimage__overlay--primary {
+    background: rgb(238, 12, 132);
+}
+
+.mainimage__overlay > * {
+    transform: translateY(20px);
+    transition: transform 0.25s;
+}
+
+.mainimage__overlay:hover {
+    opacity: 1;
+}
+
+.mainimage__overlay:hover > * {
+    transform: translateY(0);
+}
+
+.mainimage__title {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.mainimage__description {
+    font-size: 1.25em;
+    margin-top: 0.25em;
+}
 
 
+#cool_description{
+   margin-bottom:200px;
+    
+}
+
+#warm_description{
+   
+   
+}
+
+/*메인 콘텐츠 이미지에 관한 속성들(끝)*/
 
 
 
