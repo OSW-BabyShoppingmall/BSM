@@ -18,6 +18,10 @@ Baby Shoppingmall
 4월 4주차
 </td>
 
+<td>
+4월 5주차
+</td>
+
 
 </tr>
 
@@ -32,6 +36,7 @@ Baby Shoppingmall
 </td>
 
 <td>
+메인페이지 구현
 </td>
 
 </tr>
@@ -45,6 +50,10 @@ Baby Shoppingmall
 cool/warm 페이지 뼈대 구현
 </td>
 
+<td>
+warm페이지 구현
+</td>
+
 </tr>
 
 <tr>
@@ -56,7 +65,13 @@ cool/warm 페이지 뼈대 구현
 공지사항 페이지 뼈대 구현
 </td>
 
+<td>
+공지사항 페이지 구현 및 Q&A 페이지 구현
+</td>
+
 </tr>
+
+
 
 
 </table>
