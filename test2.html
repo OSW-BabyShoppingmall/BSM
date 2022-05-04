@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baby Shoppingmall</title>
+    <link rel="stylesheet" type="text/css" href="testcss2.css">
+</head>
+<body>
+
+    
+
+<div id="wrapper">
+
+    <div id="header">
+
+        <div class="menubar">
+
+            
+            
+
+                    <div class="top_right">
+                            
+                        <ul>
+                            <li>Items
+                                <div class="sub-menu">
+                                    <ul>
+                                        <li><a href="#">Warm</a></li>
+                                        <li><a href="#">Cool</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>Service Center
+                                <div class="sub-menu">
+                                    <ul>
+                                        <li><a href="notice.html">Notice</a></li>
+                                        <li><a href="#">Q&A</a></li>
+                                        <li><a href="#">Review</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>Account
+                                <div class="sub-menu">
+                                    <ul>
+                                        <li><a href="#">Log In</a></li>
+                                        <li><a href="#">Sign Up</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+
+                    
+                    </div>
+    
+        </div>
+
+        <div class="top_left">
+            
+
+            <ul> 
+                <li> <a href="index.html"><img src="img/textlogo.png" id="textlogo">
+                    <img id="logo" src="img/logo2-removed.png">
+                    </a> 
+                </li> 
+                </ul>
+
+        </div>
+
+        
+    
+        
+        <div class="imagecontainer">
+                
+            <div class="image">
+            </div>
+        
+            <div class="image" style="background-image:url('img/kids3.jpg')">
+            </div>
+            
+            <div class="image" style="background-image:url('img/kids5.jpg')">
+            </div>
+            
+            <div class="image" style="background-image:url('img/kids6.jpg')">
+            </div>  
+
+            <div class="image" style="background-image:url('img/kids8.jpg')">
+            </div>  
+                   
+            
+        </div>
+
+        <div class="radiowrap">
+            <input type="radio" name="radio-btn" id="radio1">
+            <input type="radio" name="radio-btn" id="radio2">
+            <input type="radio" name="radio-btn" id="radio3">
+            <input type="radio" name="radio-btn" id="radio4">
+            <input type="radio" name="radio-btn" id="radio5">
+        </div>
+
+      
+        <br>
+        <br>
+       
+
+        
+        <script>
+
+            
+            var move=true;
+            var counter = 2;
+
+            document.getElementById('radio1').checked=true;
+            if(move){
+                console.log("inner"+move);
+            setInterval(function(){
+
+            var radioid=document.getElementById('radio' + counter);
+            radioid.checked = true;
+            document.querySelector('.imagecontainer').style.transform=`translate(${(counter-1)*(-100)}vw)`;
+            
+            counter++;
+            if(counter > 5){
+                counter = 1;
+            }
+            }, 3500);
+        }
+       
+
+            document.querySelector('#radio1').addEventListener('click' ,function() {
+                document.querySelector('.imagecontainer').style.transform='translate(+0vw)';
+            });
+            document.querySelector('#radio2').addEventListener('click' ,function() {
+                document.querySelector('.imagecontainer').style.transform='translate(-100vw)';
+            });
+            document.querySelector('#radio3').addEventListener('click' ,function() {
+                document.querySelector('.imagecontainer').style.transform='translate(-200vw)';
+            });
+            document.querySelector('#radio4').addEventListener('click' ,function() {
+                document.querySelector('.imagecontainer').style.transform='translate(-300vw)';
+            });
+            document.querySelector('#radio5').addEventListener('click' ,function() {
+                document.querySelector('.imagecontainer').style.transform='translate(-400vw)';
+            });
+        
+            
+        
+        </script>
+
+  </div>
+   
+
+
+    <div id="content">
+        
+        
+        <div class="categoryimage">
+
+            <div class="coolwrapper">
+                <div class="mainimage">
+                    <img class="mainimage__img" src="img/kids11.jpg" alt="Bricks">
+                    <div class="mainimage__overlay coolimage__overlay--primary">
+                        <div class="mainimage__title"><a id="coolanchor" href="cool.html">Cool</a></div>
+                    
+                    
+                    </div>
+
+                
+                </div>
+                <div class="coolimage_description">
+                    안녕하세요구르트위스트월킹받네
+                </div>
+      
+            
+     
+            
+            </div>
+            <br>
+            <br>
+
+            <div class="warmwrapper">
+
+
+                <div class="warmimage_description">
+                    안녕하세요구르트위스트월킹받네
+                </div>
+
+                <div class="warmimage">
+                    <img class="mainimage__img" src="img/kids10.jpg" alt="Bricks">
+                    <div class="mainimage__overlay warmimage__overlay--primary">
+                        <div class="mainimage__title"><a id="warmanchor" href="warm.html">Warm</a></div>
+                    </div>
+
+
+                    
+                    
+                </div>
+                
+            </div>
+
+            
+           
+ 
+        </div>
+
+        <div class="blank"></div>
+        
+        <script>
+            function Createblanks() {
+                var blank=document.getElementsByClassName('blank')[0];
+                blank.innerHTML="<br>"+"<br>"+"<br>"+"<br>"+"<br>"+"<br>"+"<br>"+"<br>"
+            }
+            Createblanks();
+        </script>
+    
+        <hr>
+
+
+        <div class="descriptionimage">
+            <div>
+           <img id="adult" src="img/adult1.jpg"  alt="">
+           </div>
+           <div id="orange">
+               hello oragne
+           </div>
+       </div>
+
+
+    </div> 
+  
+
+    <div id="footer">
+      
+        개발자 소개
+        <br>
+        계좌번호
+        <br>
+        call center
+        개발자 소개
+        <br>
+        계좌번호
+        <br>
+        call center
+        개발자 소개
+        <br>
+        계좌번호
+        <br>
+        call center
+        개발자 소개
+        <br>
+        계좌번호
+        <br>
+        call center
+        개발자 소개
+        <br>
+        계좌번호
+        <br>
+        call center
+        개발자 소개
+        <br>
+        계좌번호
+        <br>
+        call center
+        개발자 소개
+        <br>
+        계좌번호
+        <br>
+        call center
+        개발자 소개
+        <br>
+        계좌번호
+        <br>
+        call center
+        개발자 소개
+        <br>
+        계좌번호
+        <br>
+        call center
+        개발자 소개
+        <br>
+        계좌번호
+        <br>
+        call center
+        개발자 소개
+        <br>
+        계좌번호
+        <br>
+        call center
+        개발자 소개
+        <br>
+        계좌번호
+        <br>
+        call center
+        개발자 소개
+        <br>
+        계좌번호
+        <br>
+        call center
+        개발자 소개
+        <br>
+        계좌번호
+        <br>
+        call center
+        개발자 소개
+        <br>
+        계좌번호
+        <br>
+        call center
+        개발자 소개
+        <br>
+        계좌번호
+        <br>
+        call center
+        개발자 소개
+        <br>
+        계좌번호
+        <br>
+        call center
+        개발자 소개
+        <br>
+        계좌번호
+        <br>
+        call center
+        개발자 소개
+        <br>
+        계좌번호
+        <br>
+        call center
+        개발자 소개
+        <br>
+        계좌번호
+        <br>
+        call center
+        개발자 소개
+        <br>
+        계좌번호
+        <br>
+        call center
+        개발자 소개
+        <br>
+        계좌번호
+        <br>
+        call center
+        개발자 소개
+        <br>
+        계좌번호
+        <br>
+        call center
+        개발자 소개
+        <br>
+        계좌번호
+        <br>
+        call center
+        개발자 소개
+        <br>
+        계좌번호
+        <br>
+        call center
+        개발자 소개
+        <br>
+        계좌번호
+        <br>
+        call center
+        개발자 소개
+        <br>
+        계좌번호
+        <br>
+        call center
+    </div>
+
+
+</div>
+    
+</body>
+</html>
