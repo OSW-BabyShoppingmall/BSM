@@ -139,32 +139,18 @@ color:#fbff02
 color:#3509d4
 }
 
-/*
-.warmimage{
-float:right;
-}
-*/
 
-/*
-.coolimage__description{
-display:inline-block;
-text-align:center;
-}
-*/
-/*
-.coolimage__description{
-display:inline-block;
-}*/
 
 .mainimage {
 
 position: relative;
-width: 800px;
+width: 700px;
 }
 .warmimage{
 position: relative;
-width: 800px;
-left:700px;
+width: 700px;
+margin-right:0;
+margin-left:auto;
 }
 
 .mainimage__img {
@@ -187,6 +173,9 @@ align-items: center;
 justify-content: center;
 opacity: 0;
 transition: opacity 0.75s;
+}
+.life{
+    position:absolute;
 }
 
 .mainimage__overlay--blur {
