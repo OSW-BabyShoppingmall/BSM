@@ -5,25 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Baby Shoppingmall</title>
-    <link type="text/css" rel="stylesheet" href="indexstyle.css">
+    <link rel="stylesheet" type="text/css" href="indexstyle.css">
 </head>
 <body>
 
     
 
-<div id="wrapper">
+<div class="wrapper">
 
     <div id="header">
 
         <div class="menubar">
-            <div class="top_left">
+
             
-
-                <ul> 
-                    <li> <a href="index.html"><img id="logo" src="img/logo2-removed.png"></a> </li> 
-                    </ul>
-
-            </div>
+            
 
                     <div class="top_right">
                             
@@ -31,7 +26,7 @@
                             <li>Items
                                 <div class="sub-menu">
                                     <ul>
-                                        <li><a href="#">Warm</a></li>
+                                        <li><a href="Warm.html">Warm</a></li>
                                         <li><a href="#">Cool</a></li>
                                     </ul>
                                 </div>
@@ -60,6 +55,19 @@
     
         </div>
 
+        <div class="top_left">
+            
+
+            <ul> 
+                <li> <a href="index.html"><img src="img/textlogo.png" id="textlogo">
+                    <img id="logo" src="img/logo2-removed.png">
+                    </a> 
+                </li> 
+                </ul>
+
+        </div>
+
+        
     
         
         <div class="imagecontainer">
@@ -89,6 +97,8 @@
             <input type="radio" name="radio-btn" id="radio4">
             <input type="radio" name="radio-btn" id="radio5">
         </div>
+
+      
         <br>
         <br>
        
@@ -115,10 +125,7 @@
             }
             }, 3500);
         }
-        function Movestop(){
-            move=false;
-            console.log(move);
-        }
+       
 
             document.querySelector('#radio1').addEventListener('click' ,function() {
                 document.querySelector('.imagecontainer').style.transform='translate(+0vw)';
@@ -138,45 +145,89 @@
         
             
         
-    </script>
+        </script>
 
   </div>
    
 
 
-    <div id="content">
+    <div class="content">
         
         
         <div class="categoryimage">
 
-            <div class="mainimage">
-                <img class="mainimage__img" src="img/kids11.jpg" alt="Bricks">
-                <div class="mainimage__overlay coolimage__overlay--primary">
-                    <div class="mainimage__title"><a id="coolanchor" href="cool.html">Cool</a></div>
+            <div class="coolwrapper">
+                <div class="mainimage">
+                    <img class="mainimage__img" src="img/kids11.jpg" alt="Bricks">
+                    <div class="mainimage__overlay coolimage__overlay--primary">
+                        <div class="mainimage__title"><a id="coolanchor" href="cool.html">Cool</a></div>
+                    
+                    
+                    </div>
+
+                
+                </div>
+                <div class="coolimage_description">
+                    무더운 여름말고 쾌적한, <br> &nbsp; &nbsp; 시원한, 산뜻한 여름
+                </div>
+      
+            
+     
+            
+            </div>
+            <br>
+            <br>
+
+            <div class="warmwrapper">
+
+
+                <div class="warmimage_description">
+                    닿는 순간, 부드러움을 느끼는<br> 
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 아이의 겨울
+                </div>
+            
+                <div class="warmimage">
+                    <img class="mainimage__img" src="img/kids10.jpg" alt="Bricks">
+                    <div class="mainimage__overlay warmimage__overlay--primary">
+                        <div class="mainimage__title"><a id="warmanchor" href="Warm.html">Warm</a></div>
+                    </div>
+
+
+                   
+                    
                 </div>
                 
             </div>
 
-            
-     
-            
-            
-            <br>
-            <br>
-
-            <div class="warmimage">
-                <img class="mainimage__img" src="img/kids10.jpg" alt="Bricks">
-                <div class="mainimage__overlay warmimage__overlay--primary">
-                    <div class="mainimage__title"><a id="warmanchor" href="warm.html">Warm</a></div>
-                </div>
-            </div>
             
            
  
         </div>
 
 
-       
+        <div class="blank"></div>
+        
+        <script>
+            function Createblanks() {
+                var blank=document.getElementsByClassName('blank')[0];
+                blank.innerHTML="<br>"+"<br>"+"<br>"+"<br>"+"<br>"+"<br>"
+            }
+            Createblanks();
+        </script>
+    
+        <hr>
+
+        
+
+
+        <div class="descriptionimage">
+            <div>
+           <img id="adult" src="img/adult1.jpg"  alt="">
+           </div>
+           <div id="orange">
+               hello oragne
+           </div>
+       </div>
 
 
     </div> 
