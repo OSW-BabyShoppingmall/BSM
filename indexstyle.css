@@ -12,6 +12,7 @@ font-family:'Nunito','sans-serif';
 }
 ul{
 list-style:none;
+font-weight:700;
 }
 
 .menubar{
@@ -22,6 +23,7 @@ z-index:1;
 
 .wrapper{
     background-color:#f1f3f5;
+    overflow:hidden;
 }
 
 /* 상단메뉴바에대한 속성들(시작)*/
@@ -76,7 +78,7 @@ a{
 text-decoration:none;
 }
 #header{
-overflow:hidden;
+    overflow:hidden;
 }
 
 /*헤더의 이미지파일들에 관한 속성들(시작)*/
@@ -95,6 +97,14 @@ height:725px;
 background-repeat:no-repeat;
 background-image:url(img/kids.jpg);
 float:left;
+
+}
+.descriptionimage{
+    background-size:100% auto; 
+width:100vw;
+height:725px;
+background-repeat:no-repeat;
+background-image:url(img/kids.jpg);
 
 }
 
@@ -258,22 +268,42 @@ width: 500px;
 left:700px;
 }
 
-#adult{
-width:70%;
-float:left;
+
+.infowrapper{
+width:100vw;
 }
 
-#orange{
-width:30%;
-float:right;
+.infoimage{
+    
+background-size:100% auto; 
+height:725px;
+background-repeat:no-repeat;
+background-image:url(img/kids8.jpg);
 }
 
 /*메인 콘텐츠 이미지에 관한 속성들(끝)*/
 
 
 
-
+/*footer에 관한 속성들(시작)*/
 
 #footer{
 clear:both;
+background-color:#f1f3f5;
+display:flex;
 }
+
+.bottom_left{
+    width:40%;
+   
+}
+.bottom_middle{
+    width:40%;
+    
+}
+.bottom_right{
+    width:20%;
+    
+}
+
+/*footer에 관한 속성들(끝)*/
