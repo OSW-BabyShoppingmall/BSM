@@ -1,9 +1,6 @@
-.top{
-    background-image: url(img/kids7.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 300px;
-    color: white;
+.top p{
+    text-align: center;
+    font-size: 90px;
 }
 img#logo{
     width:100px;
@@ -18,13 +15,9 @@ body{
     margin-right: 5%;
     
 }
-.mainboard table{
-    border-collapse: collapse;
-    text-align: center;
-}
-.mainboard td{
-    padding-top: 5px;
-    padding-bottom: 5px;
+.mainboard td, th{
+    padding-top: 10px;
+    padding-bottom: 10px;
     text-align: center;
 }
 .bottom{
