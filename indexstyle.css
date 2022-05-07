@@ -15,11 +15,7 @@ list-style:none;
 font-weight:700;
 }
 
-.menubar{
-width:100%;
-position:fixed;
-z-index:1;
-}
+
 
 .wrapper{
     background-color:#f1f3f5;
@@ -27,6 +23,12 @@ z-index:1;
 }
 
 /* 상단메뉴바에대한 속성들(시작)*/
+
+.menubar{
+    width:100%;
+    position:fixed;
+    z-index:1;
+    }
 
 .top_left{
     margin-top:100px;
@@ -86,7 +88,7 @@ text-decoration:none;
 .imagecontainer{
 margin-top:80px;
 white-space:nowrap;
-width:500vw;
+width:400vw;
 transition:transform 2s;
 
 }
@@ -259,7 +261,6 @@ margin-top: 0.25em;
 }
 
 
-
 .descriptionimage{
 
 margin-top:100px;
@@ -268,18 +269,22 @@ width: 500px;
 left:700px;
 }
 
-
 .infowrapper{
-width:100vw;
+    width:100vw;
+    display:inline-block;
 }
 
 .infoimage{
-    
-background-size:100% auto; 
-height:725px;
-background-repeat:no-repeat;
-background-image:url(img/kids8.jpg);
+float:left;
 }
+
+.infodescription{
+display:inline-block;
+text-align:center;
+margin-left:100px;
+padding-top:50px;
+}
+
 
 /*메인 콘텐츠 이미지에 관한 속성들(끝)*/
 
