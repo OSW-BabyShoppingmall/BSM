@@ -109,6 +109,18 @@ img#logo{
 body{
     background-color: #f1f3f5;
 }
+
+#popup{
+    position: fixed;
+    display: none;
+    border: 5px solid #e283a3;
+    background-color: #f1f3f5;
+    margin-top: 5%;
+    margin-left: 15%;
+    width: 70%;
+    height: 70%;
+}
+
 .mainboard{
     background-color: white;
     margin-left: 5%;
@@ -122,6 +134,9 @@ body{
     padding-top: 10px;
     padding-bottom: 10px;
     text-align: center;
+}
+.mainboard td:hover{
+    text-decoration: underline #e283a3;
 }
 .bottom{
     margin-top: 10px;
