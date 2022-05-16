@@ -112,6 +112,42 @@
     }
     
     /*footer에 관한 속성들(끝)*/
+
+    /*map.html*/
+    hr {
+        width: 50px;
+        border: 2px solid;
+        float: left;
+    }
+
+    table {
+        border-collapse: collapse;
+    }
+
+    .tbody {
+        background-color: rgb(211, 207, 207);
+    }
+
+    td,
+    tr {
+        border: 2px solid grey;
+        width: 300px;
+        text-align: center;
+    }
+    #main{
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
     #map{
-        margin-left: 15%;
+        width: 60%;
+        height: 650px;
+        float: left;
+
+    }
+    #explain{
+        float: left;
+        background-color:antiquewhite;
+        width: 40%;
+        height: 650px;
     }
