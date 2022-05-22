@@ -16,13 +16,17 @@ font-weight:700;
 }
 
 
-
 .wrapper{
     background-color:#f1f3f5;
     overflow:hidden;
 }
 
+html {
+    scroll-behavior: smooth;
+  }
+
 /* 상단메뉴바에대한 속성들(시작)*/
+
 
 
 .navbar-nav  li a:hover{
@@ -81,14 +85,13 @@ margin:100px 100px 0px 100px;
     display:inline-block;
     position:relative;
     margin:0px;
-    width: 700px;
-    height: 700px;
+    width:65%;
 }
 
 .mainimage__img{
-width:700px;
-height:700px;
-}
+    width:100%;
+ }
+
 
 
 #coolanchor{
@@ -119,10 +122,10 @@ color:#fbff02;
 }
 
 .coolimage_description{
-    /*display:inline-block;*/
+   
+   
     float:right;
-    margin-top:300px;
-   /* margin-right:150px;*/
+    padding-top:300px;
     font-size:30px;
 }
 
