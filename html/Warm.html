@@ -4,11 +4,11 @@
   <meta charset="utf-8">
   <title>WebHomeWork</title>
 
-  <link href="warm/slick.css" rel="stylesheet">
+  <link href="../warm/slick.css" rel="stylesheet">
   <script src="http://code.jquery.com/jquery-latest.js">
   </script>
-  <script src="warm/slick.js"></script>
-  <script src="warm/jquery.easing.js"></script>
+  <script src="../warm/slick.js"></script>
+  <script src="../warm/jquery.easing.js"></script>
 <style>
 .page1 { position:fixed;top:0;left:0;    /*벽에 딲 붙이기 위해 fixed */
  width:100%; height:100%; background:#F66;
@@ -221,7 +221,7 @@ img#textlogo{
                                     <li>Items
                                         <div class="sub-menu">
                                             <ul>
-                                                <li><a href="Warm.html">Warm</a></li>
+                                                <li><a href="../html/Warm.html">Warm</a></li>
                                                 <li><a href="#">Cool</a></li>
                                             </ul>
                                         </div>
@@ -229,8 +229,8 @@ img#textlogo{
                                     <li>Service Center
                                         <div class="sub-menu">
                                             <ul>
-                                                <li><a href="notice.html">Notice</a></li>
-                                                <li><a href="#">Q&A</a></li>
+                                                <li><a href="../html/notice.html">Notice</a></li>
+                                                <li><a href="../html/qna.html">Q&A</a></li>
                                                 <li><a href="#">Review</a></li>
                                             </ul>
                                         </div>
@@ -254,8 +254,8 @@ img#textlogo{
 
 
                     <ul>
-                        <li> <a href="index.html"><img src="img/textlogo.png" id="textlogo" >
-                            <img id="logo" src="img/logo2-removed.png">
+                        <li> <a href="../index.html"><img src="../img/textlogo.png" id="textlogo" >
+                            <img id="logo" src="../img/logo2-removed.png">
                             </a>
                         </li>
 
@@ -274,7 +274,7 @@ img#textlogo{
         for(var j=0;j<5;j++){
           document.write('<tr>');
           for(var i=1; i<4; i++){
-            document.write('<td><div><a href="#" onclick="return false"><img src="warm.img/cloth'+(3*j+i)+'.png" onmousedown="showPage2('+(3*j+i)+')"/></a></div></td>');
+            document.write('<td><div><a href="#" onclick="return false"><img src="../warm.img/cloth'+(3*j+i)+'.png" onmousedown="showPage2('+(3*j+i)+')"/></a></div></td>');
           }//showpage2할떄 k=3*j+i가되도록. ,k_i로되도록  //showapge2가 눌러지면 아이템리스트를 생성하도록
           document.write('</tr>');
         }
@@ -287,17 +287,17 @@ img#textlogo{
 <div class="screenfence"></div>
 
 <div class="page2">
-  <a href="#" onclick="return false"><img id="exitbutton" src="warm.img/exit.png" onclick="Exit()"/></a>
-    <div style="width:10%; margin-top: 25%; float:left;  display:inline-block;">  <button class="pagemove"style="margin-left:35%;"><a href="#" onclick="return false"><img src="warm.img/leftarrow.png"></a></button> </div>
+  <a href="#" onclick="return false"><img id="exitbutton" src="../warm.img/exit.png" onclick="Exit()"/></a>
+    <div style="width:10%; margin-top: 25%; float:left;  display:inline-block;">  <button class="pagemove"style="margin-left:35%;"><a href="#" onclick="return false"><img src="../warm.img/leftarrow.png"></a></button> </div>
 
     <div style=" float:left;  margin-top: 2.5%; background-color: white; width:80%; height:90%; display:inline-block;">
       <div class="left">
         <div class="slider single-item" id="slideritem">
-          <img class="imageitem" src="warm.img/cloth1.png" alt="img">
-          <img class="imageitem" src="warm.img/cloth1.png" alt="img">
-          <img class="imageitem" src="warm.img/cloth2.png" alt="img">
-          <img class="imageitem" src="warm.img/cloth2.png" alt="img">
-          <img class="imageitem" src="warm.img/cloth3.png" alt="img">
+          <img class="imageitem" src="../warm.img/cloth1.png" alt="img">
+          <img class="imageitem" src="../warm.img/cloth1.png" alt="img">
+          <img class="imageitem" src="../warm.img/cloth2.png" alt="img">
+          <img class="imageitem" src="../warm.img/cloth2.png" alt="img">
+          <img class="imageitem" src="../warm.img/cloth3.png" alt="img">
 
         </div>
       </div>
@@ -317,11 +317,11 @@ img#textlogo{
 
 
                 <div class="bottom_left"><br><h3>Developer Info</h3>
-                    <br>Doyoung Park <a href="https://github.com/doyoungpark0930" target="_blank"><img src="img/github.png" width="20px" height="20px"></a>
+                    <br>Doyoung Park <a href="https://github.com/doyoungpark0930" target="_blank"><img src="../img/github.png" width="20px" height="20px"></a>
                     <br>Software department Junior <br>
-                    <br>SeongMun Hwang <a href="https://github.com/SeongMun-Hwang" target="_blank"><img src="img/github.png" width="20px" height="20px"></a>
+                    <br>SeongMun Hwang <a href="https://github.com/SeongMun-Hwang" target="_blank"><img src="../img/github.png" width="20px" height="20px"></a>
                     <br>Software department Junior <br>
-                    <br>Sangwoo Rim <a href="https://github.com/the-groot" target="_blank"><img src="img/github.png" width="20px" height="20px"></a>
+                    <br>Sangwoo Rim <a href="https://github.com/the-groot" target="_blank"><img src="../img/github.png" width="20px" height="20px"></a>
                     <br>Software department Junior <br>
 
                 </div>
@@ -358,7 +358,7 @@ $('.single-item').slick({
     var elements=document.getElementsByClassName("imageitem");  //imageitem은 5개로 제한한다
     for(var i=0;i<elements.length;i++)
     {
-      elements[i].src="warm.img/cloth1.png";  //k+i뭐이렇게되도록.. 오늘이거끝내고자야한다
+      elements[i].src="../warm.img/cloth1.png";  //k+i뭐이렇게되도록.. 오늘이거끝내고자야한다
     }
     document.getElementById("right").innerHTML='fds';
     var screenFence=document.getElementsByClassName("screenfence");
