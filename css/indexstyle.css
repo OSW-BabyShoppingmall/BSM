@@ -112,18 +112,14 @@ color:#fbff02;
 
 
 .warmimage{
-    display:inline-block;
     
     position:relative;
-    left:150px;
-    width: 700px;
-    height: 700px;
-    
+    margin:0px;
+    width:60%;
+    float:right;
 }
 
 .coolimage_description{
-   
-   
     float:right;
     padding-top:300px;
     font-size:30px;
@@ -132,10 +128,8 @@ color:#fbff02;
 
 
 .warmimage_description{
-   /*display:inline-block;*/
    float:left;
-   margin-top:300px;
-   margin-left:150px;
+   padding-top:300px;
    font-size:30px;
 
 }
