@@ -216,6 +216,26 @@ padding-top:50px;
 }
 
 
+
+.image-frame{
+    position: relative;
+	padding: 0;
+}
+
+.image-caption{
+	display: none;
+	width: 350px;
+	position: absolute;
+	bottom: 0px;
+	background-color: black;
+	color: white;
+	opacity: 0.8;
+}
+
+
+
+
+
 /*메인 콘텐츠 이미지에 관한 속성들(끝)*/
 
 
