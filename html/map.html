@@ -4,7 +4,6 @@
 <head>
     <link rel="stylesheet" href="../css/map.css">
     <script src="../js/map.js"></script>
-    <script src="../js/position.js"></script>
 </head>
 
 <body>
@@ -49,19 +48,18 @@
                             <img id="logo" src="../img/logo2-removed.png">
                         </a>
                     </li>
-                    <button onclick="navigator.geolocation.getCurrentPosition(onGeOk,onGeoError);
-                    ">click</button>
-                    <div id="weather">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                      </div>                    
                 </ul>
             </div>
         </div>
 
         <div id="main">
             <h1 style="text-align: center;">How to visit</h1>
+            <button onclick="navigator.geolocation.getCurrentPosition(onGeOk,onGeoError);">Click to show your Loaction!</button>
+                    <div id="weather">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                      </div>                    
             <div id="map"></div>
             <div id="explain">
                 <p>explain</p>
