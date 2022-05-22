@@ -135,7 +135,11 @@ height:80px;
 
 /*메인 콘텐츠 이미지에 관한 속성들(시작)*/
 
-
+.hidden{
+    display:none;
+    background-color:black;
+    color:white;
+  }
 
 
 .categoryimage{
