@@ -16,7 +16,7 @@
     <script src="js/position.js"></script>
     <script src="js/blank.js"></script>
     <script src="js/team.js"></script>
-
+    <script src="js/fadein.js"></script>
 
 
   </head>
@@ -206,8 +206,9 @@
             <div class="infoimage">
                 <img src="img/kids8.jpg" style="height:600px;" class="img-responsive">
             </div>
+            <button id="infobtn">click me to show website information</button>
        
-            <div class="infodescription">
+            <div class="infodescription" style="display:none;">
             
                 <p style="font-size:100px;">Ime</p>
 
@@ -295,7 +296,7 @@
       <br><button onclick="navigator.geolocation.getCurrentPosition(onGeOk,onGeoError);">How to visit</button></div>
 
 
-      <div class="bottom_right"><br><h3>Custmoer Info</h3>
+      <div class="bottom_right"><br><h3>Customer Info</h3>
         <br>Monday - Thursday : 10:00AM ~ 06:00PM<br>
         Friday :  09:00AM ~  05:00PM<br>
         Break Time :  12:00PM ~ 01:00PM<br>
