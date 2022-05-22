@@ -15,8 +15,8 @@
     <script src="js/jquery.cycle2.min.js"></script>
     <script src="js/position.js"></script>
     <script src="js/blank.js"></script>
-   
-
+    <script src="js/team.js"></script>
+    <script src="js/fadein.js"></script>
 
 
   </head>
@@ -129,7 +129,7 @@
               <div class="mainimage">
                   <img class="mainimage__img img-responsive" src="img/kids11.jpg" alt="Bricks">
                   <div class="mainimage__overlay coolimage__overlay--primary">
-                      <div class="mainimage__title"><a id="coolanchor" href="cool.html">Cool</a></div>
+                      <div class="mainimage__title"><a id="coolanchor" href="html/cool.html">Cool</a></div>
                   
                   
                   </div>
@@ -156,7 +156,7 @@
               <div class="warmimage">
                   <img class="mainimage__img img-responsive" src="img/kids10.jpg" alt="Bricks">
                   <div class="mainimage__overlay warmimage__overlay--primary">
-                      <div class="mainimage__title"><a id="warmanchor" href="Warm.html">Warm</a></div>
+                      <div class="mainimage__title"><a id="warmanchor" href="html/Warm.html">Warm</a></div>
                   </div>
   
   
@@ -197,56 +197,95 @@
 
       <div class="infowrapper">
 
-        <div class="blank"></div>
-              <script>
-                createBlanks(2);
-              </script>
-        <hr style="border:1px solid black; width: 100% !important;">
-        
-        <div class="infoimage">
-            <img src="img/kids8.jpg" style="height:600px;" class="img-responsive">
-        </div>
+            <div class="blank"></div>
+                <script>
+                    createBlanks(2);
+                </script>
+            <hr style="border:1px solid black; width: 100% !important;">
+            
+            <div class="infoimage">
+                <img src="img/kids8.jpg" style="height:600px;" class="img-responsive">
+            </div>
+            <button id="infobtn">click me to show website information</button>
        
-        <div class="infodescription">
+            <div class="infodescription" style="display:none;">
             
-            <p style="font-size:100px;">Ime</p>
+                <p style="font-size:100px;">Ime</p>
 
-            <p style="font-size:20px;"><b>shopping for my child</b></p>
-            <br>
-            <br>
-            <br>
-            <br>
+                <p style="font-size:20px;"><b>shopping for my child</b></p>
+                <br>
+                <br>
+                <br>
+                <br>
             
 
 
-            Ime is an infant shopping mall website.<br>
-            We sell cool and warm clothes.<br>
-                Unlike traditional shopping mall websites, <br>
-                We threw away the complicated screen composition.<br>
-                Through this, customers can easily access the items<br>
-                and be able to purchase easily.<br>
-                There are various clothes, so feel free to look around!!
+                Ime is an infant shopping mall website.<br>
+                We sell cool and warm clothes.<br>
+                    Unlike traditional shopping mall websites, <br>
+                    We threw away the complicated screen composition.<br>
+                    Through this, customers can easily access the items<br>
+                    and be able to purchase easily.<br>
+                    There are various clothes, so feel free to look around!!
             </div>
 
+        </div> 
+        <hr style="border:1px solid black; width: 100% !important;">
+
+        <div class="container-fluid bg-3 text-center">
+          <h3>Who are we?</h3>
+          <div class="row">
+            <div class="image-frame col-sm-4" id="image-frame1">
+              <img src="img/profile1.png" class="img-responsive" width="350px;">
+              <div class="image-caption" id="image-caption1">
+                <p>Hi~ My name is Park Doyoung.<br> I am a leader of team unity.<br>
+                I created product pages like cool/warm</p>
+              </div>
+              </div>
+            
+            
+              <div class="image-frame col-sm-4" id="image-frame2">
+                <img src="img/profile2.png" class="img-responsive" width="350px;">
+                <div class="image-caption" id="image-caption2">
+                  <p>Hi~ My name is Hwang Seoungmun.<br>
+                    I created Q&A, Notice, Cart pages <br>and also Google map function</p>
+                  </div>
+                </div>
+            
+            
+                <div class="image-frame col-sm-4" id="image-frame3">
+                  <img src="img/profile3.png" class="img-responsive" width="350px;">
+                  <div class="image-caption" id="image-caption3" >
+                    <p>Hi~ My name is Rim Sangwoo<br>
+                      I created Main, Login, Signup pages</p>
+                  </div>
+                  
+          </div>        
+        </div>
+
+
+
+
     </div> 
-    <hr style="border:1px solid black; width: 100% !important;">
-</div> 
 
     
 
     
     <div id="footer">
       
-        
+      
       
       
       <div class="bottom_left"><br><h3>Developer Info</h3>
           <br>Doyoung Park <a href="https://github.com/doyoungpark0930" target="_blank"><img src="img/github.png" width="20px" height="20px"></a>
           <br>Software department Junior <br>
+          studnetId:2018038<br>
           <br>SeongMun Hwang <a href="https://github.com/SeongMun-Hwang" target="_blank"><img src="img/github.png" width="20px" height="20px"></a>
           <br>Software department Junior <br>
+          studnetId:2018038<br>
           <br>Sangwoo Rim <a href="https://github.com/the-groot" target="_blank"><img src="img/github.png" width="20px" height="20px"></a>
           <br>Software department Junior <br>
+          studnetId:2018038072<br>
           
       </div>
           
@@ -257,7 +296,7 @@
       <br><button onclick="navigator.geolocation.getCurrentPosition(onGeOk,onGeoError);">How to visit</button></div>
 
 
-      <div class="bottom_right"><br><h3>Custmoer Info</h3>
+      <div class="bottom_right"><br><h3>Customer Info</h3>
         <br>Monday - Thursday : 10:00AM ~ 06:00PM<br>
         Friday :  09:00AM ~  05:00PM<br>
         Break Time :  12:00PM ~ 01:00PM<br>
