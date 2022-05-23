@@ -4,7 +4,6 @@
           
     
     *{
-    overflow:hidden;    
     padding:0;
     margin:0;
     font-family:'Nunito','sans-serif';
@@ -14,6 +13,33 @@
     font-weight:700;
     }
 
+    
+/* 상단메뉴바에대한 속성들(시작)*/
+
+.menuicon{
+    font-size:10px;
+}
+
+
+.navbar-nav  li a:hover{
+    color: #FF87D2 !important;
+}
+.wrapper{
+    overflow-x:hidden;
+}
+.logoimg{
+    padding-top:100px;
+    padding-bottom:80px;
+}
+
+.logoimg #textlogo{
+    width: 180px;
+    height: 80px;
+}
+
+
+
+/*상단메뉴바에대한 속성들(끝)*/
    
     
     .hr-sect {
@@ -58,6 +84,29 @@ span{
 .signup{
     padding:50px;
 }
+
+
+/*footer에 관한 속성들(시작)*/
+
+#footer{
+    clear:both;
+    background-color:#f1f3f5;
+    display:flex;
+    margin-top:100px;
+    }
+    
+    .bottom_left{
+        width:40%;
+    }
+    .bottom_middle{
+        width:40%;
+    }
+    .bottom_right{
+        width:20%;
+        
+    }
+    
+    /*footer에 관한 속성들(끝)*/
 
 
     
