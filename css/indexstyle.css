@@ -27,6 +27,9 @@ html {
 
 /* 상단메뉴바에대한 속성들(시작)*/
 
+.menuicon{
+    font-size:10px;
+}
 
 
 .navbar-nav  li a:hover{
@@ -34,8 +37,8 @@ html {
 }
 
 .logoimg{
-    padding-top:50px;
-    padding-bottom:20px;
+    padding-top:100px;
+    padding-bottom:80px;
 }
 
 .logoimg #textlogo{
@@ -206,6 +209,14 @@ left:700px;
 
 .infoimage{
 float:left;
+}
+
+#heart{
+    font-size:50px;
+    color:#FF3399;
+}
+.bg-3{
+    background-color:#e6f0f2;
 }
 
 .infodescription{
