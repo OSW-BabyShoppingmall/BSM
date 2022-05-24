@@ -2,6 +2,12 @@
 <html>
 
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="../css/map.css">
     <script src="../js/map.js"></script>
 </head>
@@ -52,20 +58,28 @@
             </div>
         </div>
 
-        <div id="main">
+        <div id="main" class="row">
             <h1 style="text-align: center;">How to visit</h1>
-            <button onclick="navigator.geolocation.getCurrentPosition(onGeOk,onGeoError);">Click to show your Loaction!</button>
-                    <div id="weather">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                      </div>                    
-            <div id="map"></div>
-            <div id="explain">
-                <p>explain</p>
+            <button onclick="navigator.geolocation.getCurrentPosition(onGeOk,onGeoError);">Click to show your
+                Loaction!</button>
+            <div id="weather">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div id="map" class="col-sm-12"></div>
+            <div class="col-sm-4">
+                <img class="explain" src="#">
+                <h1 class="explain"></h1>
+                <h3 class="glyphicon glyphicon-map-marker icon"></h3><br>
+                <h3 class="glyphicon glyphicon-earphone icon"></h3><br>
+                <h3 class="glyphicon glyphicon-time icon"></h3><br>
+                <h3 class="glyphicon glyphicon-globe icon"></h3><br><br>
+                <button onclick="left()"><h3 class="glyphicon glyphicon-triangle-left icon"></h3></button>
+                <button style="float: right;" onclick="right()"><h3 class="glyphicon glyphicon-triangle-right icon"></h3></button>               
             </div>
         </div>
-        
+
 
         <script src="https://maps.googleapis.com/maps/api/js?key=
     AIzaSyCaTH2C0PeE_3eRaTNPzntN2FvKmZBAFA8&libraries=visualization&callback=myMap"></script>
@@ -73,11 +87,11 @@
         <div id="footer">
             <div class="bottom_left"><br>
                 <h3>Developer Info</h3>
-                <br>Doyoung Park <a href="https://github.com/doyoungpark0930" target="_blank"><img src="../img/github.png"
-                        width="20px" height="20px"></a>
+                <br>Doyoung Park <a href="https://github.com/doyoungpark0930" target="_blank"><img
+                        src="../img/github.png" width="20px" height="20px"></a>
                 <br>Software department Junior <br>
-                <br>SeongMun Hwang <a href="https://github.com/SeongMun-Hwang" target="_blank"><img src="../img/github.png"
-                        width="20px" height="20px"></a>
+                <br>SeongMun Hwang <a href="https://github.com/SeongMun-Hwang" target="_blank"><img
+                        src="../img/github.png" width="20px" height="20px"></a>
                 <br>Software department Junior <br>
                 <br>Sangwoo Rim <a href="https://github.com/the-groot" target="_blank"><img src="../img/github.png"
                         width="20px" height="20px"></a>

@@ -1,8 +1,8 @@
 //지도
 var map;
 var markerdata;
-
-
+var marker = new Array;
+var value;
 function myMap() {
     markerdata = [
         new google.maps.LatLng(36.62563026275683, 127.4544004838527), //과건물
@@ -24,7 +24,7 @@ function myMap() {
         "chungbuk university brach", "Seongangil brach", "gwell city brach"
     ]
 
-    var marker = new Array;
+
     for (var i = 0; i < markerdata.length; i++) {
         marker[i] = new google.maps.Marker({
             position: markerdata[i],
@@ -39,14 +39,20 @@ function myMap() {
     marker[0].addListener('click', () => {
         map.setZoom(18);
         map.setCenter(markerdata[0]);
+        show_explain(0);
+        value=0;
     });
     marker[1].addListener('click', () => {
         map.setZoom(18);
         map.setCenter(markerdata[1]);
+        show_explain(1);
+        value=1;
     });
     marker[2].addListener('click', () => {
         map.setZoom(18);
         map.setCenter(markerdata[2]);
+        show_explain(2);
+        value=2;
     });
 }
 
@@ -70,30 +76,29 @@ function onGeOk(position) {
     });
     var user_near;
     var x = new Array;
-    x[0] = Math.sqrt((36.62563026275683 - lat)**2 + (127.4544004838527 - lon)**2);
-    x[1] = Math.sqrt((36.63426936439814 - lat)**2 + (127.48757506306855 - lon)**2);
-    x[2] = Math.sqrt((36.642919630018554 - lat)**2 + (127.42666365026183 - lon)**2);
-    alert(x[1]);
+    x[0] = Math.sqrt((36.62563026275683 - lat) ** 2 + (127.4544004838527 - lon) ** 2);
+    x[1] = Math.sqrt((36.63426936439814 - lat) ** 2 + (127.48757506306855 - lon) ** 2);
+    x[2] = Math.sqrt((36.642919630018554 - lat) ** 2 + (127.42666365026183 - lon) ** 2);
 
     if (x[0] < x[1]) {
         if (x[0] < x[2]) {
             user_near = markerdata[0];
         }
-        else if(x[0]>x[2]){
+        else if (x[0] > x[2]) {
             user_near = markerdata[2];
         }
     }
-    else if(x[1]<x[0]) {
+    else if (x[1] < x[0]) {
         if (x[1] < x[2]) {
             user_near = markerdata[1];
         }
-        else if(x[1]>x[2]) {
+        else if (x[1] > x[2]) {
             user_near = markerdata[2];
         }
     }
     var near_path = new google.maps.Polyline({
         path: [user_location, user_near],
-        strokeColor: "#0000FF",
+        strokeColor: "yellow",
         strokeOpacity: 0.8,
         strokeWeight: 2
     })
@@ -102,4 +107,69 @@ function onGeOk(position) {
 
 function onGeoError() {
     alert("Can't find you. No position with you");
+}
+
+
+var locate_info = [
+    ["../img/s4-1.jpg", "Chungbuk", "충청북도 청주시 서원구 충대로 1 충북대학교 S4-1", "000-000-0000", "10:00AM ~ 06:00PM", "index.html",0],
+    ["../img/seongangil.jpg", "SeongAngil", "KR 충북 청주시 상당구 문화동 93-1", "111-111-1111", "10:00AM ~ 06:00PM", "index.html",1],
+    ["../img/gwellcity.jpg", "GwellCity", "충청북도 청주시 흥덕구 대농로 43 KR 지웰시티몰 1차 104호", "222-222-2222", "10:00AM ~ 06:00PM", "index.html",2]
+];
+
+function show_explain(n) {   
+    var x = document.getElementsByClassName("col-sm-4");
+    x[0].style.visibility = "visible";
+    var x = document.querySelectorAll("img.explain");
+    x[0].src = locate_info[n][0];
+    var x = document.querySelectorAll("h1.explain");
+    x[0].innerHTML = locate_info[n][1];
+
+    var x = document.querySelectorAll("h3.glyphicon");
+    x[0].innerHTML = locate_info[n][2];
+    x[1].innerHTML = locate_info[n][3];
+    x[2].innerHTML = locate_info[n][4];
+    x[3].innerHTML = locate_info[n][5];
+    return n;
+}
+
+function left(){
+    value-=1;
+    if(value<0){
+        value=2;
+    }
+    var x = document.getElementsByClassName("col-sm-4");
+    x[0].style.visibility = "visible";
+    var x = document.querySelectorAll("img.explain");
+    x[0].src = locate_info[value][0];
+    var x = document.querySelectorAll("h1.explain");
+    x[0].innerHTML = locate_info[value][1];
+
+    var x = document.querySelectorAll("h3.glyphicon");
+    x[0].innerHTML = locate_info[value][2];
+    x[1].innerHTML = locate_info[value][3];
+    x[2].innerHTML = locate_info[value][4];
+    x[3].innerHTML = locate_info[value][5];
+    map.setZoom(18);
+    map.setCenter(markerdata[value]);
+}
+
+function right(){
+    value+=1;
+    if(value>2){
+        value=0;
+    }
+    var x = document.getElementsByClassName("col-sm-4");
+    x[0].style.visibility = "visible";
+    var x = document.querySelectorAll("img.explain");
+    x[0].src = locate_info[value][0];
+    var x = document.querySelectorAll("h1.explain");
+    x[0].innerHTML = locate_info[value][1];
+
+    var x = document.querySelectorAll("h3.glyphicon");
+    x[0].innerHTML = locate_info[value][2];
+    x[1].innerHTML = locate_info[value][3];
+    x[2].innerHTML = locate_info[value][4];
+    x[3].innerHTML = locate_info[value][5];
+    map.setZoom(18);
+    map.setCenter(markerdata[value]);
 }
