@@ -1,13 +1,15 @@
 //지도
 var map;
-var markerdata = [
-    new google.maps.LatLng(36.62563026275683, 127.4544004838527), //과건물
-    new google.maps.LatLng(36.63426936439814, 127.48757506306855), //성안길점
-    new google.maps.LatLng(36.642919630018554, 127.42666365026183), //지웰시티점
+var markerdata;
 
-]
 
 function myMap() {
+    markerdata = [
+        new google.maps.LatLng(36.62563026275683, 127.4544004838527), //과건물
+        new google.maps.LatLng(36.63426936439814, 127.48757506306855), //성안길점
+        new google.maps.LatLng(36.642919630018554, 127.42666365026183), //지웰시티점
+    ];
+
     var mapCanvas = document.getElementById("map");
     var myCenter = new google.maps.LatLng(36.629324678692065, 127.45740173322012); //충북대중앙
     var mapOptions = {
@@ -61,11 +63,41 @@ function onGeOk(position) {
         city.innerText = data.name;
         weather.innerText = "latitude:" + lat + "   " + "longitude:" + lon;
     })
-    var user_center = new google.maps.LatLng(lat ,lon)
+    var user_location = new google.maps.LatLng(lat, lon)
     var user_marker = new google.maps.Marker({
-        position: user_center,
+        position: user_location,
         map: map
     });
+    var user_near;
+    var x = new Array;
+    x[0] = Math.sqrt((36.62563026275683 - lat)**2 + (127.4544004838527 - lon)**2);
+    x[1] = Math.sqrt((36.63426936439814 - lat)**2 + (127.48757506306855 - lon)**2);
+    x[2] = Math.sqrt((36.642919630018554 - lat)**2 + (127.42666365026183 - lon)**2);
+    alert(x[1]);
+
+    if (x[0] < x[1]) {
+        if (x[0] < x[2]) {
+            user_near = markerdata[0];
+        }
+        else if(x[0]>x[2]){
+            user_near = markerdata[2];
+        }
+    }
+    else if(x[1]<x[0]) {
+        if (x[1] < x[2]) {
+            user_near = markerdata[1];
+        }
+        else if(x[1]>x[2]) {
+            user_near = markerdata[2];
+        }
+    }
+    var near_path = new google.maps.Polyline({
+        path: [user_location, user_near],
+        strokeColor: "#0000FF",
+        strokeOpacity: 0.8,
+        strokeWeight: 2
+    })
+    near_path.setMap(map);
 };
 
 function onGeoError() {
