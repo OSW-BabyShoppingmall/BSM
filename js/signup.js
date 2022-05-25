@@ -1,5 +1,6 @@
 var code=999999;
 
+
 function doubleCheck(){
     var id=document.getElementById("id").value;
     console.log(id);
@@ -61,6 +62,7 @@ function signUp(){
            
             if(checkpass==1){
             alert("Sign up success "+name+"!!");
+            savelocalStorage();
             location.href="../html/login.html";
             }
             else{
@@ -125,3 +127,20 @@ $(document).ready(function() {
 });
 
 
+function savelocalStorage(){
+    event.preventDefault();                 //새로고침 막음
+    const id=$("#id").val();
+    const pwd=$("#password_1").val();
+    const name=$("#name").val();
+    let info=[];
+
+   
+    
+    const newInfoObj={  //객체를 만들어 text와 id설정
+        id: id,
+        password : pwd,
+        name: name
+    };
+    info.push(newInfoObj); //toDos에 객체 값 저장
+    localStorage.setItem("userinfo", JSON.stringify(info)); //key : todos , value : {text, id} stringify는 string형태로 저장하는 것
+}

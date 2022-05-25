@@ -15,36 +15,7 @@
     <script src="https://malsup.github.io/jquery.blockUI.js"></script>
     <script src="../js/login.js"></script>
 
-    <script>
-        $(document).ready(function() { 
-
-            $("#submitt").click(function () {
-                $.blockUI({
-  
-                    // blockUI code with custom 
-                    // message and styling
-                    message: "<h3>Please Wait...<h3>",
-                    css: { color: 'green', borderColor: 'green'}
-                });
-                setTimeout(function () {
-                    $.unblockUI();
-                    location.href="../index.html";
-                    alert("login success!");
-                }, 2000);
-            });
-
-          
-            $('#signup').click(function() { 
-            $.blockUI({ message: null }); 
- 
-            setTimeout(function () {
-                    $.unblockUI();
-                    location.href="../html/signup.html";
-                    }, 1500);
-    }); 
- 
-}); 
-    </script>
+   
 
 </head>
 <body>
