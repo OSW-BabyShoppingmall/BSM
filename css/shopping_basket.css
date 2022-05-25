@@ -115,16 +115,24 @@ display:flex;
 /*장바구니 속성*/
 #list{
     position: relative;
-    background-color: red;
+    background-color: rgb(255, 194, 179);
     height: 500px;
 }
 .open_basket{
-    position: relative;
+    position: relativeg;
     bottom: 0px;
 }
 #basket{
-    background-color: blue;
+    background-color: rgb(233, 163, 146);
     position: absolute;    
     bottom: 0px;
 }
 
+#basket li p{
+    float: left;
+}
+
+img{
+    width: 40px;
+    height: 40px;
+}
