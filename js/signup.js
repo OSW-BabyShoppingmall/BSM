@@ -16,10 +16,11 @@ function getCode(){
     alert("varification code: "+code);
 }
 
-function agreeAll(){
-  
 
-}
+
+
+
+
 
 function moveLogin(){
     location.href="../html/login.html";
@@ -27,37 +28,45 @@ function moveLogin(){
 
 
 
+//회원가입 통과시킬지 말지 
+
 function signUp(){
-    var id=document.getElementById("id").value;
-    var pwd1=document.getElementById("password_1").value;
-    var pwd2=document.getElementById("password_2").value;
-    var name=document.getElementById("name").value;
-    var year=document.getElementById("year").value;
-    var day=document.getElementById("day").value;
-    var phone=document.getElementById("phone").value;
-    var usercode=document.getElementById("code").value;
-    var checkboxes=document.getElementsByClassName("terms");
-    var molla=document.getElementById("term1");
+   // $("#id").val()
+    var id=$("#id").val();
+    var pwd1=$("#password_1").val();
+    var pwd2=$("#password_2").val();
+    var name=$("#name").val();
+    var year=$("#year").val();
+    var day=$("#day").val();
+    var phone=$("#phone").val();
+    var usercode=$("#code").val();
+    
+    
+  
     var checkpass=1;
 
     if(id!="" && pwd1!="" && pwd2!="" && name!="" && year!="" 
     && day!="" && phone!="" && usercode!=""){
         if(pwd1==pwd2 && code==usercode){
             var i=0;
-            for(i; i<checkboxes.length; i++){
-                console.log(checkboxes[i].getAttribute("checked"));
-                if(checkboxes[i].getAttribute("checked")=="false"){
-                    checkpass=0;
-                    console.log("in a loop"+checkpass);
-                }
-            }
-            console.log(checkpass);
-            if(checkpass==1){
-            alert("pass");
+            console.log($("#cbx_chkAll").is(":checked"));
+            
+            if($("#cbx_chkAll").is(":checked")){
+               checkpass=1;
             }
             else{
-                alert("Please agree terms of services");
+                checkpass=0;
             }
+            
+           
+            if(checkpass==1){
+            alert("Sign up success "+name+"!!");
+            location.href="../html/login.html";
+            }
+            else{
+                alert("Please agree all terms of services");
+            }
+            console.log(checkpass)
         }
         else if(pwd1!=pwd2){
             alert("password is different");
@@ -68,12 +77,51 @@ function signUp(){
         
     }
     else{
-        var i=0;
-        var what=molla.getAttribute("checked")
-            console.log(what);
-        
+      
         alert("Please input information correctly");
     }
 
 
 }
+
+//체크박스 선택 기능
+
+$(document).ready(function() {
+	$("#cbx_chkAll").click(function() {
+		if($("#cbx_chkAll").is(":checked")) $("input[name=chk]").prop("checked", true);
+		else $("input[name=chk]").prop("checked", false);
+	});
+
+	$("input[name=chk]").click(function() {
+		var total = $("input[name=chk]").length;
+		var checked = $("input[name=chk]:checked").length;
+
+		if(total != checked) $("#cbx_chkAll").prop("checked", false);
+		else $("#cbx_chkAll").prop("checked", true); 
+	});
+});
+
+
+
+//비밀번호 일치여부 확인기능
+
+$(document).ready(function() {
+	$('.pw').focusout(function () {
+        var pwd1 = $("#password_1").val();
+        var pwd2 = $("#password_2").val();
+    
+        if ( pwd1 != '' && pwd2 == '' ) {
+            null;
+        } else if (pwd1 != "" || pwd2 != "") {
+            if (pwd1 == pwd2) {
+                $("#alert-success").css('display', 'inline-block');
+                $("#alert-danger").css('display', 'none');
+            } else {
+                $("#alert-success").css('display', 'none');
+                $("#alert-danger").css('display', 'inline-block');
+            }
+        }
+    });
+});
+
+
