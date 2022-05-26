@@ -88,11 +88,9 @@ img#textlogo{
 width:200px;
 height:80px;
 }
-
-
 /*헤더의 이미지파일들에 관한 속성들(끝)*/
-    /*footer에 관한 속성들(시작)*/
 
+/*footer에 관한 속성들(시작)*/
 #footer{
 clear:both;
 background-color:#f1f3f5;
@@ -109,30 +107,43 @@ display:flex;
     width:20%;
     
 }
-
 /*footer에 관한 속성들(끝)*/
 
 /*장바구니 속성*/
 #list{
+    text-align: center;
     position: relative;
-    background-color: rgb(255, 194, 179);
-    height: 500px;
+    background-color: white;
+    height: 700px;
 }
 .open_basket{
-    position: relativeg;
+    position: relative;
     bottom: 0px;
 }
 #basket{
-    background-color: rgb(233, 163, 146);
+    overflow: scroll;
+    overflow-x: hidden;
+    background-color: white;
     position: absolute;    
     bottom: 0px;
+    text-align: center;
+    height: 500px;
 }
 
 #basket li p{
     float: left;
 }
 
-img{
-    width: 40px;
-    height: 40px;
+.cloth1 img{
+    width: 150px;
+    height: 150px;
+}
+
+.order{
+    text-align: center;
+}
+
+.order img{
+    width: 200px;
+    height: 80px;
 }
