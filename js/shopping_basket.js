@@ -9,8 +9,11 @@ var product_number=0;
 
 var product_data=[
     ["../warm.img/cloth1_1.png",".cloth1_1","1"],
-    ["../warm.img/cloth1.png",".cloth1_2","2"],
-    ["../warm.img/cloth2.png",".cloth1_3","3"],
+    ["../warm.img/cloth1_2.png",".cloth1_2","2"],
+    ["../warm.img/cloth3_1.png",".cloth1_3","3"],
+    ["",".cloth1_4","4"],
+    ["",".cloth1_5","5"],
+    ["",".cloth1_6","6"],
 ]
 
 //호출한 태그의 클래스값 저장
@@ -49,6 +52,33 @@ $(document).ready(function () {
         } else {
             remove(2);
             minus_total(2);
+        }
+    });
+    $(".cloth1_4").change(function () {
+        if ($(".cloth1_4").is(":checked")) {
+            append(".cloth1",3);
+            add_total(3);
+        } else {
+            remove(3);
+            minus_total(3);
+        }
+    });
+    $(".cloth1_5").change(function () {
+        if ($(".cloth1_5").is(":checked")) {
+            append(".cloth1",4);
+            add_total(4);
+        } else {
+            remove(4);
+            minus_total(4);
+        }
+    });
+    $(".cloth1_6").change(function () {
+        if ($(".cloth1_6").is(":checked")) {
+            append(".cloth1",5);
+            add_total(5);
+        } else {
+            remove(5);
+            minus_total(5);
         }
     });
 });
