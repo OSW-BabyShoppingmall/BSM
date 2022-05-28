@@ -93,7 +93,7 @@ display:flex;
 #basket{
     overflow: scroll;
     overflow-x: hidden;
-    background-color: white;
+    background-color: rgb(255, 238, 238);
     position: absolute;    
     bottom: 0px;
     text-align: center;
