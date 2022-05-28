@@ -5,8 +5,8 @@
   <title>WebHomeWork</title>
 
   <link href="../warm/slick.css" rel="stylesheet">
-  <script src="http://code.jquery.com/jquery-latest.js">
-  </script>
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="../warm/slick.js"></script>
   <script src="../warm/jquery.easing.js"></script>
 <style>
@@ -34,10 +34,23 @@ visibility:hidden;}
   width: 30px;
   height:30px;
 }
-div.header{
-  width: 100%;
-  height:300px;
+
+table td{
+  background-color: white;
 }
+table td div{
+  width:350px;
+  height: 350px;
+  text-align: center;
+}
+table td div img{
+  width: 100%;
+  height: 100%;
+}
+table{
+  border-spacing: 30px;
+}
+
 button img{
   width: 45px;
   height:45px;
@@ -77,28 +90,18 @@ div.right{
     width: 0%;
     height:0%;
 }
-.slick-prev { position:absolute; z-index:999; top:50%; left:5%; border:0; padding:10px;background-image: url("warm.img/leftarrow1.png"); box-shadow:0 0 10px rgba(255,255,255,0.8);
+.slick-prev { position:absolute; z-index:999; top:50%; left:5%; border:0; padding:10px;background-image: url("../warm.img/leftarrow1.png"); box-shadow:0 0 10px rgba(255,255,255,0.8);
 color:rgba(0,0,0,0); width: 40px; height: 40px; border-radius: 20px; margin-left: -20px; margin-top: -10px;
   }
-.slick-next { position:absolute; z-index:999; top:50%; right:5%; border:0; padding:10px;background-image: url("warm.img/rightarrow1.png"); box-shadow:0 0 10px rgba(255,255,255,0.8);
+.slick-next { position:absolute; z-index:999; top:50%; right:5%; border:0; padding:10px;background-image: url("../warm.img/rightarrow1.png"); box-shadow:0 0 10px rgba(255,255,255,0.8);
 color:rgba(0,0,0,0); width: 40px; height: 40px; border-radius: 20px; margin-right: -20px; margin-top: -10px;}
 
 
+
 /*상우가준것*/
-table td{
-  background-color: white;
-}
-table td div{
-  width:350px;
-  height: 350px;
-  text-align: center;
-}
-table td div img{
+div.header{
   width: 100%;
-  height: 100%;
-}
-table{
-  border-spacing: 30px;
+  height:300px;
 }
 #footer{
     clear:both;
@@ -201,8 +204,41 @@ img#textlogo{
 .top_left a{
     text-decoration:none;
     }
-    /*상우가준것*/
+    /*상우가준것 */
+
+
+#itemName
+{
+  font-size:40px;
+  font-weight: 500;
+}
+.itemInfo1
+{
+  font-size: 25px;
+  color:#696969;
+}
+
+.itemInfo2
+{
+  font-size: 20px;
+  color:#696969;
+}
+.oneKindItemPrice
+{
+  display:inline-block;  margin: 5px; padding-top:5px;  float:right;
+}
+.oneKindItem{
+  display:inline-block; margin: 5px;  padding: 3px; padding-left: 5px; padding-right: 7px; background-color:#848484; color:white; height:24px;
+  margin-right: 150px;
+  border-radius: 3px;
+}
+.inputNum
+{
+  width: 60px;
+}
 </style>
+
+
 </head>
 <body style="background-color:#f1f3f5">
 <div class="header">
@@ -274,7 +310,7 @@ img#textlogo{
         for(var j=0;j<5;j++){
           document.write('<tr>');
           for(var i=1; i<4; i++){
-            document.write('<td><div><a href="#" onclick="return false"><img src="../warm.img/cloth'+(3*j+i)+'.png" onmousedown="showPage2('+(3*j+i)+')"/></a></div></td>');
+            document.write('<td><div><a href="#" onclick="return false"><img src="../warm.img/cloth'+(3*j+i)+'_'+1+'.png" onmousedown="showPage2('+(3*j+i)+')"/></a></div></td>');
           }//showpage2할떄 k=3*j+i가되도록. ,k_i로되도록  //showapge2가 눌러지면 아이템리스트를 생성하도록
           document.write('</tr>');
         }
@@ -288,20 +324,126 @@ img#textlogo{
 
 <div class="page2">
   <a href="#" onclick="return false"><img id="exitbutton" src="../warm.img/exit.png" onclick="Exit()"/></a>
-    <div style="width:10%; margin-top: 25%; float:left;  display:inline-block;">  <button class="pagemove"style="margin-left:35%;"><a href="#" onclick="return false"><img src="../warm.img/leftarrow.png"></a></button> </div>
+    <div style="width:10%; margin-top: 25%; float:left;  display:inline-block;">
+       <button class="pagemove"style="margin-left:35%;"><a href="#" onclick="return false"><img src="../warm.img/leftarrow.png" onclick="PageMove('left')"></a>
+       </button>
+    </div>
 
-    <div style=" float:left;  margin-top: 2.5%; background-color: white; width:80%; height:90%; display:inline-block;">
+    <div style=" float:left;  margin-left:6%; margin-top: 2.5%; background-color: white; width:70%; height:90%; display:inline-block;">
+
       <div class="left">
         <div class="slider single-item" id="slideritem">
-          <img class="imageitem" src="../warm.img/cloth1.png" alt="img">
-          <img class="imageitem" src="../warm.img/cloth1.png" alt="img">
-          <img class="imageitem" src="../warm.img/cloth2.png" alt="img">
-          <img class="imageitem" src="../warm.img/cloth2.png" alt="img">
-          <img class="imageitem" src="../warm.img/cloth3.png" alt="img">
+          <img class="imageitem" src="refer to showPage2 of JavaScript" alt="img">
+          <img class="imageitem" src="refer to showPage2 of JavaScript" alt="img">
+          <img class="imageitem" src="refer to showPage2 of JavaScript" alt="img">
+          <img class="imageitem" src="refer to showPage2 of JavaScript" alt="img">
+          <img class="imageitem" src="refer to showPage2 of JavaScript" alt="img">
 
         </div>
       </div>
-      <div class="right" id="right">dasdasdsafffffffdsffff</div>
+      <div class="right">
+        <form>
+          <h2 id="itemName">물품 이름</h2><hr>
+          <code class="itemInfo1">
+          <br><p>판매가 : &nbsp &nbsp &nbsp &nbsp<code id="price">5000원</code></p>
+          <br><p style="font-size:20px;">배송비 : &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 2500원</p><br>
+          </code>
+          <hr>
+          <code class="itemInfo2">
+          <br>
+          <p>색상 :&nbsp &nbsp
+              <select style="width:70%; height:40px;" onchange="colorSelectFunc()">
+                      <option class="colorSelect" value="" selected="selected">-[필수] 색상 선택 -</option>
+                      <option class="colorSelect" value="101호">101호</option>
+                      <option class="colorSelect" value="102호">102호</option>
+                      <option class="colorSelect" value="103호">103호</option>
+              </select>
+          </p>
+          <br>
+          <p>사이즈 :&nbsp
+              <select style="width:70%; height:40px;" onchange="sizeSelectFunc()">
+                      <option class="sizeSelect" value="" selected="true">-[필수] 사이즈 선택 -</option>
+                      <option class="sizeSelect" value="S">S</option>
+                      <option class="sizeSelect" value="L">L</option>
+              </select>
+          </p>
+          </code>
+
+            <br>
+
+            <div class="AddItem">
+            </div>
+
+
+            <hr>
+
+        </form>
+      </div>
+
+      <script>
+      function colorSelectFunc()
+      {
+
+        var colorSelect=document.getElementsByClassName("colorSelect");
+        var sizeSelect=document.getElementsByClassName("sizeSelect");
+        sizeSelect[0].selected="true"; //색깔이 선택된다면 사이즈메뉴초기화
+
+      }
+
+      function sizeSelectFunc()
+      {
+        var colorSelect=document.getElementsByClassName("colorSelect");
+        var sizeSelect=document.getElementsByClassName("sizeSelect");
+        var selectedColor;
+        var selectedSize;
+        var AddItem=document.getElementsByClassName("AddItem");
+        var checkInclude=AddItem[0].innerHTML; //AddItem클래스에 들어있는 내용을 다 받음. AddItem은 추가한 목록인데, 중복된 아이템을 추가하지 않게하기위해 사용
+        var itemPrice=document.getElementById("price");
+        itemPrice=parseInt(itemPrice.innerHTML); //해당 물품의 가격정보를 가져온다. 그리고 뒤에 숫자가아닌 문자열은 제거시킨다
+        for(var i=1;i<=3;i++) //색상중에 선택된 색상의 인덱스를 받고,그 생상정보를 얻는다
+        {
+          if(colorSelect[i].selected == true){
+            selectedColor = colorSelect[i].value;
+            break;
+          }
+        }
+
+        for(var j=1;j<=2;j++) //사이즈 중에 선택된 사이즈의 인덱스를 받고, 그 사이즈 정보를 얻는다
+        {
+          if(sizeSelect[j].selected == true){
+            selectedSize = sizeSelect[j].value;
+            break;
+          }
+        }
+
+        if(colorSelect[0].selected !=true && sizeSelect[0].selected !=true)  //색상과 사이즈가 선택되었을 때만 추가한다
+        {
+          if(checkInclude.includes(selectedColor+'/ '+selectedSize)!=true) //이미 AddItem에 해당 아이템이 있다면, 추가하지 않는다
+          {
+            $(document).ready(function(){
+              $(".AddItem").append('<hr><div class="oneKindItem">'+selectedColor+'/ '+selectedSize+'</div><input class="inputNum" type="number" value="1" onchange="ItemPriceCalc(this)"/><div class="oneKindItemPrice">'+itemPrice+'원</div></hr>');
+
+            });
+          }
+        }
+      }
+
+
+      function ItemPriceCalc(obj) //input number에서 this값들어오면 해당 input태그가 몇번째인지 알아내서, 총 값 계산
+      {
+        var inputNum=document.getElementsByClassName("inputNum");
+        var oneKindItemPrice=document.getElementsByClassName("oneKindItemPrice");
+        //var price=document.getElementById("price");
+        var index;
+        for(var i=0;i<inputNum.length;i++) //this값과 inputNum[i]가 같음을 이용해서 해당 index를 알아냄
+        {
+          if(inputNum[i]==obj){ index=i; break;}
+        }
+
+        oneKindItemPrice[index].innerHTML = parseInt(price.innerHTML)*obj.value+'원'; //아이템 갯수당 총 값 계산
+
+      }
+      </script>
 
 
 
@@ -309,7 +451,10 @@ img#textlogo{
 
     </div>
 
-    <div style="width:10%; margin-top: 25%; float:left;  display:inline-block;"><button class="pagemove"style="margin-left:35%;"><a href="#" onclick="return false"><img src="warm.img/rightarrow.png"></a></button></div>
+    <div style="width:10%; margin-top: 25%; float:left;  display:inline-block;">
+      <button class="pagemove"style="margin-left:35%;"><a href="#" onclick="return false"><img src="../warm.img/rightarrow.png" onclick="PageMove('right')"></a>
+      </button>
+    </div>
 </div>
 <div id="footer">
 
@@ -351,22 +496,118 @@ $('.single-item').slick({
 });
 </script>
 
+
+
+
 <script>
 
   function showPage2(num)  //page2와 screenfecne를 띄운다
   {
     var elements=document.getElementsByClassName("imageitem");  //imageitem은 5개로 제한한다
+
+    var AddItem=document.getElementsByClassName("AddItem"); //추가된 아이템 목록리스트를 초기화한다.
+    AddItem[0].innerHTML="";
+
     for(var i=0;i<elements.length;i++)
     {
-      elements[i].src="../warm.img/cloth1.png";  //k+i뭐이렇게되도록.. 오늘이거끝내고자야한다
+      elements[i].src="../warm.img/cloth"+num+"_"+(i+1)+".png";  //k+i뭐이렇게되도록.. 오늘이거끝내고자야한다
     }
-    document.getElementById("right").innerHTML='fds';
+    //document.getElementById("right").innerHTML='fds'; //cloth의 번호에따라서 값이 들어가도록, 근데 이거만들고 PageMove에도 같은 코드써야되니 함수화하자
+
     var screenFence=document.getElementsByClassName("screenfence");
     var Page2=document.getElementsByClassName("page2");
     var topright=document.getElementsByClassName("top_right");
     screenFence[0].style.visibility="visible";  //screenFence로 검은막 형성
     Page2[0].style.visibility="visible";  //screenFence위에 Page2형
     topright[0].style.display="none"; //상단 submenu안보이게. 보이면 exit버튼 클릭안됨
+  }
+  function PageMove(clickDirection)
+  {   //참고로 함수에 매개변수넣을떄는 작은따옴표로 넣어야함
+
+    var AddItem=document.getElementsByClassName("AddItem"); //추가된 아이템 목록리스트를 초기화한다.
+    AddItem[0].innerHTML="";
+
+    var elements=document.getElementsByClassName("imageitem");
+    var isNum=elements[0].src.slice(-8,-7); //이것이 문자라면 9이하의 숫자, 숫자라면 두자리수이기떄문에 10이상의 숫자.근데 왜 나눈거지? > 숫자를 가져오기위하여
+    var clothIndex;
+    isNum=Number(isNum);
+    if(clickDirection=="right") //오른쪽으로 클릭이 됐다면
+    {
+      if(isNaN(isNum)) //isNan이 NaN이면 cloth 번호가 한자리수라는 뜻
+      {
+        clothIndex=elements[0].src.substr(-7,1);
+        clothIndex=parseInt(clothIndex);
+        for(var i=0;i<elements.length;i++)
+        {
+          elements[i].src = elements[i].src.replaceAt(-7,clothIndex+1);
+        }
+      }
+      else
+      { //cloth 번호가 두자리수라는 뜻
+        clothIndex=elements[0].src.substr(-8,2);
+        clothIndex=parseInt(clothIndex);
+        if(clothIndex==15) //clothIndex가 15라면, 15가 마지막 테이블이기때문에 cloth15_1에서 cloth1_1로바뀌게한다. 따라서 pagemove시 싸이클이 돌도록한다
+        {
+          for(var i=0;i<elements.length;i++)
+          {
+            elements[i].src = elements[i].src.replaceAt(-7,""); //두자리수에서 1의자리수만 +1한다
+          }
+        }
+        else
+        {
+          for(var i=0;i<elements.length;i++)
+          {
+            elements[i].src = elements[i].src.replaceAt(-7,clothIndex+1-10); //두자리수에서 1의자리수만 +1한다
+          }
+        }
+
+      }
+    }
+    else if(clickDirection=="left") //왼쪽으로 클릭이 됐다면
+    {
+      if(isNaN(isNum)) //isNan이 NaN이면 cloth 번호가 한자리수라는 뜻
+      {
+        clothIndex=elements[0].src.substr(-7,1);
+        clothIndex=parseInt(clothIndex);
+        if(clothIndex==1) //clothIndex가 1이므로, 싸이클이돌도록 맨 끝으로 가게하기위하여 1을 15로 대체한다
+        {
+          for(var i=0;i<elements.length;i++)
+          {
+            elements[i].src = elements[i].src.replaceAt(-7,15);
+          }
+        }
+        else
+        {
+          for(var i=0;i<elements.length;i++)
+          {
+            elements[i].src = elements[i].src.replaceAt(-7,clothIndex-1);
+          }
+        }
+
+      }
+      else
+      { //cloth 번호가 두자리수라는 뜻
+        clothIndex=elements[0].src.substr(-8,2);
+        clothIndex=parseInt(clothIndex);
+        for(var i=0;i<elements.length;i++)
+        {
+          if(clothIndex==10) //clothIndex가 10이라면 -1하면 9일텐데, 자리수가 바뀜으로 문자열 관리법이 좀 다르다
+          {
+            elements[i].src=elements[i].src.replaceAt(-8,9); //10에서 1부분을 9로바꾼다
+            elements[i].src=elements[i].src.replaceAt(-7,""); //10에서 0부분을 공백으로 대체한다
+          }
+          else
+          {
+            elements[i].src = elements[i].src.replaceAt(-7,clothIndex-1-10); //두자리수에서 1의자리수만 -1한
+          }
+
+        }
+      }
+    }
+    else { //PageMove의 매개변수 예외처리
+      document.write("PageMove paramater is wrong");
+    }
+    //document.write(elements[0].src);
   }
   function Exit() //page2와 screenfecne를 제거한다
   {
@@ -378,6 +619,14 @@ $('.single-item').slick({
     topright[0].style.display="block";  //상단 submenu다시 보이게
   }
 
+  String.prototype.replaceAt=function(index, character) { //문자열의 특정위치의 문자를, 입력 문자로 대체해주는 함수
+    if(index>=0){ //index가 양수인 경우
+      return this.substr(0, index) + character + this.substr(index+1);
+    }
+    else { //index가 음수인경우
+      return this.substr(0,this.length+index)+character+this.substr(this.length+index+1);
+    }
+  }
   </script>
 </body>
 </html>
