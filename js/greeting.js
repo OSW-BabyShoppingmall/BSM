@@ -23,8 +23,9 @@ if(savedToDos){     //savedToDos가 비어있지 않으면
 function paintToDo(newTodo){
     //화면에 데이터를 출력하는 함수
 
+
     var userinputname=newTodo.name;
-    console.log(userinputname);
+    
     $("#welcomename").text("Hello  "+userinputname);
     $("#welcomename").css("display","block");
   

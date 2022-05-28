@@ -46,13 +46,13 @@ if(savedToDos){     //savedToDos가 비어있지 않으면
     const parsedToDos=JSON.parse(savedToDos);   //savedToDos는 saveToDos()로 인해 string형태로 저장돼있으므로
                                                 //string을 array형태로 다시 저장해줌 
     toDos=parsedToDos;                          //그걸 다시 toDos에 저장해줌
-    parsedToDos.forEach(paintToDo);             //각각 paintToDo호출
+    parsedToDos.forEach(paintResult);             //각각 paintToDo호출
 }
 }
 
 
 
-function paintToDo(newTodo){
+function paintResult(newTodo){
     //화면에 데이터를 출력하는 함수
 
     var userinputid=$("#id").val();
