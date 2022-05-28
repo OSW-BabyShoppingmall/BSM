@@ -21,53 +21,23 @@ font-weight:700;
 
 /* 상단메뉴바에대한 속성들(시작)*/
 
-.menubar{
-    width:100%;
-    position:fixed;
-    z-index:1;
-    }
-
-.top_left{
-    margin-top:100px;
-    display:flex;
-    justify-content: center;
+.menuicon{
+    font-size:10px;
 }
 
-.top_right{
-float:right;
-width:30%;
-text-align:center;
-}
-.top_right ul{
-display:inline-flex;
-}
-.top_right ul li{
-width:120px;
-padding:15px;
-}
-.top_right ul li a{
-color:black;
-text-decoration:none;
 
+.navbar-nav  li a:hover{
+    color: #FF87D2 !important;
 }
 
-.sub-menu{
-display:none;
-margin-top:10px;
+.logoimg{
+    padding-top:100px;
+    padding-bottom:80px;
+}
 
-}
-.top_right ul li:hover  .sub-menu{
-display:block;
-position:absolute;
-}
-.top_right ul li:hover .sub-menu ul{
-display:block;
-}
-.top_right ul li:hover .sub-menu ul li{
-padding-right:0px;
-padding-left:0px;
-padding-top:10px;
-
+.logoimg #textlogo{
+    width: 180px;
+    height: 80px;
 }
 
 /*상단메뉴바에대한 속성들(끝)*/
