@@ -1,3 +1,4 @@
+
 function snsLogin(num){
     var login;
     if(num==0){

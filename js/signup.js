@@ -1,6 +1,7 @@
 var code=999999;
 
 
+
 function doubleCheck(){
     var id=document.getElementById("id").value;
     console.log(id);
@@ -41,6 +42,15 @@ function signUp(){
     var day=$("#day").val();
     var phone=$("#phone").val();
     var usercode=$("#code").val();
+
+    console.log(id);
+    console.log(pwd1);
+    console.log(pwd2);
+    console.log(name);
+    console.log(year);
+    console.log(day);
+    console.log(phone);
+    console.log(usercode);
     
     
   

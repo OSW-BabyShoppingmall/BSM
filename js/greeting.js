@@ -25,7 +25,7 @@ function paintToDo(newTodo){
 
     var userinputname=newTodo.name;
     console.log(userinputname);
-    $("#name").text("Hello  "+userinputname);
-    $("#name").css("display","block");
+    $("#welcomename").text("Hello  "+userinputname);
+    $("#welcomename").css("display","block");
   
 }
