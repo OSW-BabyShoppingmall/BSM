@@ -1,4 +1,13 @@
+
+
 $(document).ready(function(){
+    $("#infobtn").click(function(){
+      $(".infodescription").fadeIn(3000);
+    });
+  });
+
+
+  $(document).ready(function(){
     $("#image-frame1").mouseenter(function(){
       $("#image-caption1").slideDown("slow");
     });
