@@ -53,21 +53,20 @@
 
     
     
-    img#logo{
-    width:180px;
-    height:120px;
+    .logoimg{
+        padding-top:100px;
+        padding-bottom:80px;
     }
     
-    img#textlogo{
-    width:200px;
-    height:80px;
+    .logoimg #textlogo{
+        width: 180px;
+        height: 80px;
     }
     
     
     /*헤더의 이미지파일들에 관한 속성들(끝)*/
     
 .top p{
-    margin-top: 100px;
     padding-top: 250px;
     text-align: center;
     font-size: 90px;
@@ -75,17 +74,6 @@
 
 body{
     background-color: #f1f3f5;
-}
-
-#popup{
-    position: fixed;
-    display: none;
-    border: 5px solid #e283a3;
-    background-color: #f1f3f5;
-    margin-top: 5%;
-    margin-left: 15%;
-    width: 70%;
-    height: 70%;
 }
 
 .mainboard{
