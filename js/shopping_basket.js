@@ -84,9 +84,14 @@ function add(n){
 function minus(n){
     var x=document.getElementsByClassName("result");
     var y=document.getElementsByClassName("price");
-    x[n].innerHTML = Number(x[n].innerHTML)-1;
-    y[n].innerHTML=Number(y[n].innerHTML)-Number(product_data[n][2]);
-    minus_total(n);
+    if(Number(x[n].innerHTML)==0){
+        alert("There is no product");
+    }
+    else{
+        x[n].innerHTML = Number(x[n].innerHTML)-1;
+        y[n].innerHTML=Number(y[n].innerHTML)-Number(product_data[n][2]);
+        minus_total(n);
+    }
 }
     
 /*물건 가격 총합, 총 결재 금액 계산*/
@@ -111,4 +116,7 @@ function minus_total(n){
         y[0].innerHTML=10;
     }
     z[0].innerHTML=Number(x[0].innerHTML)+Number(y[0].innerHTML);
+    if(Number(x[0].innerHTML)==0){
+        z[0].innerHTML=Number(z[0].innerHTML)-10;
+    }
 }
