@@ -11,6 +11,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <title>Notice</title>
     <link rel="stylesheet" href="../css/noticeqna.css">
+    <script src="../js/greeting.js"></script>
     <style>
         .top {
             background-image: url(../img/kids6.jpg);
@@ -30,6 +31,28 @@
             color: #e283a3;
         }
     </style>
+    <script>
+        window.onload=function(){
+const savedUsername=localStorage.getItem("status"); //localStorage에 저장된 username값 받아옴
+console.log(savedUsername);
+
+if(savedUsername===null){       //localStorage에 저장된 username이 비어있으면
+    
+}
+
+else{
+    const savedToDos=localStorage.getItem("userinfo");   //localStorage에 저장된 값을 불러옴 
+    let toDos=[];
+if(savedToDos){     //savedToDos가 비어있지 않으면
+    const parsedToDos=JSON.parse(savedToDos);   //savedToDos는 saveToDos()로 인해 string형태로 저장돼있으므로
+                                                //string을 array형태로 다시 저장해줌 
+    toDos=parsedToDos;                          //그걸 다시 toDos에 저장해줌
+    parsedToDos.forEach(paintToDo);             //각각 paintToDo호출       
+ 
+}
+}
+}
+    </script>
 </head>
 <script>
     function func1() {
@@ -108,7 +131,7 @@
                       <li><a href="../html/signup.html"><span class="menuicon glyphicon glyphicon-new-window"></span> Sign up</a></li>
                     </ul>
                   </li>
-                  <li ><a href="#" id="name" style="display:none;"></a></li>
+                  <li ><a href="#" id="welcomename" style="display:none;"></a></li>
                 </ul>
                 
               </div>
