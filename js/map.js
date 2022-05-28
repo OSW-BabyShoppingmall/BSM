@@ -38,19 +38,19 @@ function myMap() {
     }
     marker[0].addListener('click', () => {
         map.setZoom(18);
-        map.setCenter(markerdata[0]);
+        map.panTo(markerdata[0]);
         show_explain(0);
         value=0;
     });
     marker[1].addListener('click', () => {
         map.setZoom(18);
-        map.setCenter(markerdata[1]);
+        map.panTo(markerdata[1]);
         show_explain(1);
         value=1;
     });
     marker[2].addListener('click', () => {
         map.setZoom(18);
-        map.setCenter(markerdata[2]);
+        map.panTo(markerdata[2]);
         show_explain(2);
         value=2;
     });
@@ -111,9 +111,9 @@ function onGeoError() {
 
 
 var locate_info = [
-    ["../img/s4-1.jpg", "Chungbuk", "충청북도 청주시 서원구 충대로 1 충북대학교 S4-1", "000-000-0000", "10:00AM ~ 06:00PM", "index.html",0],
-    ["../img/seongangil.jpg", "SeongAngil", "KR 충북 청주시 상당구 문화동 93-1", "111-111-1111", "10:00AM ~ 06:00PM", "index.html",1],
-    ["../img/gwellcity.jpg", "GwellCity", "충청북도 청주시 흥덕구 대농로 43 KR 지웰시티몰 1차 104호", "222-222-2222", "10:00AM ~ 06:00PM", "index.html",2]
+    ["../img/s4-1.jpg", "Chungbuk", "1, Chungdae-ro, Seowon-gu, Cheongju-si, Chungcheongbuk-do, Republic of Korea", "000-000-0000", "10:00AM ~ 06:00PM", "index.html",0],
+    ["../img/seongangil.jpg", "SeongAngil", "66, Sangdang-ro, Sangdang-gu, Cheongju-si, Chungcheongbuk-do, Republic of Korea", "111-111-1111", "10:00AM ~ 06:00PM", "index.html",1],
+    ["../img/gwellcity.jpg", "GwellCity", "43, Daenong-ro, Heungdeok-gu, Cheongju-si, Chungcheongbuk-do, Republic of Korea", "222-222-2222", "10:00AM ~ 06:00PM", "index.html",2]
 ];
 
 function show_explain(n) {   
@@ -149,7 +149,7 @@ function left(){
     x[1].innerHTML = locate_info[value][3];
     x[2].innerHTML = locate_info[value][4];
     x[3].innerHTML = locate_info[value][5];
-    map.setZoom(18);
+    map.panTo(18);
     map.setCenter(markerdata[value]);
 }
 
@@ -170,6 +170,6 @@ function right(){
     x[1].innerHTML = locate_info[value][3];
     x[2].innerHTML = locate_info[value][4];
     x[3].innerHTML = locate_info[value][5];
-    map.setZoom(18);
+    map.panTo(18);
     map.setCenter(markerdata[value]);
 }
