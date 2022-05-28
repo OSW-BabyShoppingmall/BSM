@@ -3,192 +3,208 @@
 </div>
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <script src="../js/greeting.js"></script>
-    <title>Q&A</title>
-    <link rel="stylesheet" href="../css/noticeqna.css">
-    <style>
-        .top {
-            background-image: url(../img/kids7.jpg);
-            background-repeat: no-repeat;
-            background-size: cover;
-            height: 600px;
-            color: white;
-        }
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="../js/greeting.js"></script>
+  <title>Q&A</title>
+  <link rel="stylesheet" href="../css/noticeqna.css">
+  <style>
+    .top {
+      background-image: url(../img/kids7.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 600px;
+      color: white;
+    }
 
-        .mainboard th,
-        td {
-            border-bottom: 1px solid #99bf78;
-        }
+    .mainboard th,
+    td {
+      border-bottom: 1px solid #99bf78;
+    }
 
-        .bottom a,
-        a:visited {
-            color: #99bf78;
-        }
-    </style>
+    .bottom a,
+    a:visited {
+      color: #99bf78;
+    }
+  </style>
 </head>
 
 <body>
-    <div class="wrapper">
-        <nav class="navbar navbar-default navbar-fixed-top">
-            <div class="container-fluid menubar">
-              <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="../index.html"><img src="../img/logo2-removed.png" alt="" width="70px;" height="35px;"></a>
-              </div>
-              <div class="collapse navbar-collapse" id="myNavbar">
-                <ul class="nav navbar-nav navbar-right">
-                  <li class="active"><a href="../index.html"><span class="menuicon glyphicon glyphicon-home"></span> Home</a></li>
-                  <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                      <span class="menuicon glyphicon glyphicon-usd"></span> Items
-                    <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                      <li><a href="#"><span class="menuicon glyphicon glyphicon-sunglasses"></span> Cool</a></li>
-                      <li><a href="../html/warm.html"><span class="menuicon glyphicon glyphicon-fire"></span> Warm</a></li>
-                    </ul>
-                  </li>
-                  <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                      <span class="menuicon glyphicon glyphicon-headphones"></span> Service Center
-                    <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                      <li><a href="../html/notice.html"><span class="menuicon glyphicon glyphicon-bullhorn"></span> Notice</a></li>
-                      <li><a href="../html/qna.html"><span class="menuicon glyphicon glyphicon-question-sign"></span> Q&A</a></li>
-                      <li><a href="../html/map.html"><span class="menuicon glyphicon glyphicon-map-marker"></span> Map</a></li>
-                    </ul>
-                  </li>
-                  <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                      <span class="menuicon glyphicon glyphicon-user"></span> Account
-                    <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                      <li><a href="../html/login.html"><span class="menuicon glyphicon glyphicon-log-in"></span> Log in</a></li>
-                      <li><a href="../html/signup.html"><span class="menuicon glyphicon glyphicon-new-window"></span> Sign up</a></li>
-                    </ul>
-                  </li>
-                  <li ><a href="#" id="welcomename" style="display:none;"></a></li>
-                </ul>
-                
-              </div>
-            </div>
-          </nav>
-          
+  <div class="wrapper">
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid menubar">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html"><img src="../img/logo2-removed.png" alt="" width="70px;"
+              height="35px;"></a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="../index.html"><span class="menuicon glyphicon glyphicon-home"></span> Home</a>
+            </li>
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                <span class="menuicon glyphicon glyphicon-usd"></span> Items
+                <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#"><span class="menuicon glyphicon glyphicon-sunglasses"></span> Cool</a></li>
+                <li><a href="../html/warm.html"><span class="menuicon glyphicon glyphicon-fire"></span> Warm</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                <span class="menuicon glyphicon glyphicon-headphones"></span> Service Center
+                <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="../html/notice.html"><span class="menuicon glyphicon glyphicon-bullhorn"></span> Notice</a>
+                </li>
+                <li><a href="../html/qna.html"><span class="menuicon glyphicon glyphicon-question-sign"></span> Q&A</a>
+                </li>
+                <li><a href="../html/map.html"><span class="menuicon glyphicon glyphicon-map-marker"></span> Map</a>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                <span class="menuicon glyphicon glyphicon-user"></span> Account
+                <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="../html/login.html"><span class="menuicon glyphicon glyphicon-log-in"></span> Log in</a>
+                </li>
+                <li><a href="../html/signup.html"><span class="menuicon glyphicon glyphicon-new-window"></span> Sign
+                    up</a></li>
+              </ul>
+            </li>
+            <li><a href="#" id="welcomename" style="display:none;"></a></li>
+          </ul>
+
+        </div>
+      </div>
+    </nav>
+
 
     <div class="container-fluid text-center logoimg">
-        
 
-        <ul> 
-            <li> <a href="../index.html">
-                <img src="../img/textlogo.png" id="textlogo">
-                <img id="logo" src="../img/logo2-removed.png">
-                </a> 
-            </li> 
-            </ul>
+
+      <ul>
+        <li> <a href="../index.html">
+            <img src="../img/textlogo.png" id="textlogo">
+            <img id="logo" src="../img/logo2-removed.png">
+          </a>
+        </li>
+      </ul>
 
     </div>
-        </div>
-        <div class="top">
-            <p>Q&A</p>
-        </div>
+  </div>
+  <div class="top">
+    <p>Q&A</p>
+  </div>
 
-        <div class="mainboard">
-            <table style="width: 100%;">
-                <caption>
-                    <h1>Q&A lists</h1>
-                </caption>
-                <thead>
-                    <tr>
-                        <th>No.</th>
-                        <th>Title</th>
-                        <th>writer</th>
-                        <th>draw date</th>
-                        <th>views</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>Guide for the exchange/refund for the defectives</td>
-                        <td>Manager</td>
-                        <td>2022-05-06</td>
-                        <td>999</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Guide for How to use coupon</td>
-                        <td>Manager</td>
-                        <td>2022-01-01</td>
-                        <td>999</td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td>Guide for the payment method</td>
-                        <td>Manager</td>
-                        <td>2022-03-03</td>
-                        <td>999</td>
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td>Guide for change or cancel order</td>
-                        <td>Manager</td>
-                        <td>2022-03-03</td>
-                        <td>999</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>How can I know when the products arrived?</td>
-                        <td>seoungmun</td>
-                        <td>2022-03-17</td>
-                        <td>7</td>
-                    </tr>
-                </tbody>
-            </table>
-            <div class="bottom">
-                <a href="#" class="bt">First page</a>
-                <a href="#" class="bt">Previous page</a>
-                <a href="#" class="num on">1</a>
-                <a href="#" class="num">2</a>
-                <a href="#" class="num">3</a>
-                <a href="#" class="bt">Next page</a>
-                <a href="#" class="bt">Last page</a>
-                <br><br>
-            </div>
-        </div>
+  <div class="mainboard">
+    <table style="width: 100%;">
+      <caption>
+        <h1>Q&A lists</h1>
+      </caption>
+      <thead>
+        <tr>
+          <th>No.</th>
+          <th>Title</th>
+          <th>writer</th>
+          <th>draw date</th>
+          <th>views</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Guide for the exchange/refund for the defectives</td>
+          <td>Manager</td>
+          <td>2022-05-06</td>
+          <td>999</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>How can I know when the products arrived?</td>
+          <td>seoungmun</td>
+          <td>2022-03-17</td>
+          <td>7</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Guide for How to use coupon</td>
+          <td>Manager</td>
+          <td>2022-01-01</td>
+          <td>999</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Guide for the payment method</td>
+          <td>Manager</td>
+          <td>2022-03-03</td>
+          <td>999</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>Guide for change or cancel order</td>
+          <td>Manager</td>
+          <td>2022-03-03</td>
+          <td>999</td>
+        </tr>
 
-        <div id="footer">
-          <div class="bottom_left"><br><h3>Developer Info</h3>
-              <br>Doyoung Park <a href="https://github.com/doyoungpark0930" target="_blank"><img src="../img/github.png" width="20px" height="20px"></a>
-              <br>Software department Junior <br>
-              studnetId:2018038077<br>
-              <br>SeongMun Hwang <a href="https://github.com/SeongMun-Hwang" target="_blank"><img src="../img/github.png" width="20px" height="20px"></a>
-              <br>Software department Junior <br>
-              studnetId:2018038048<br>
-              <br>Sangwoo Rim <a href="https://github.com/the-groot" target="_blank"><img src="../img/github.png" width="20px" height="20px"></a>
-              <br>Software department Junior <br>
-              studnetId:2018038072<br>
-          </div>   
-    
-          <div class="bottom_middle"><br><h3>Contact</h3>
-          <br>doyoung@naver.com<br>seoungmun@naver.com<br>sangwoo@naver.com
-          <br>010-2693-XXXX<br>
-          </div>
-    
-          <div class="bottom_right"><br><h3>Customer Info</h3>
-            <br>Monday - Thursday : 10:00AM ~ 06:00PM<br>
-            Friday :  09:00AM ~  05:00PM<br>
-            Break Time :  12:00PM ~ 01:00PM<br>
-            Closed on weekends/holidays</div>  
-        </div>
+      </tbody>
+    </table>
+    <div class="bottom">
+      <nav aria-label="Page navigation example">
+        <ul class="pagination">
+          <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+          <li class="page-item"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item"><a class="page-link" href="#">Next</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <div id="footer">
+    <div class="bottom_left"><br>
+      <h3>Developer Info</h3>
+      <br>Doyoung Park <a href="https://github.com/doyoungpark0930" target="_blank"><img src="../img/github.png"
+          width="20px" height="20px"></a>
+      <br>Software department Junior <br>
+      studnetId:2018038077<br>
+      <br>SeongMun Hwang <a href="https://github.com/SeongMun-Hwang" target="_blank"><img src="../img/github.png"
+          width="20px" height="20px"></a>
+      <br>Software department Junior <br>
+      studnetId:2018038048<br>
+      <br>Sangwoo Rim <a href="https://github.com/the-groot" target="_blank"><img src="../img/github.png" width="20px"
+          height="20px"></a>
+      <br>Software department Junior <br>
+      studnetId:2018038072<br>
+    </div>
+
+    <div class="bottom_middle"><br>
+      <h3>Contact</h3>
+      <br>doyoung@naver.com<br>seoungmun@naver.com<br>sangwoo@naver.com
+      <br>010-2693-XXXX<br>
+    </div>
+
+    <div class="bottom_right"><br>
+      <h3>Customer Info</h3>
+      <br>Monday - Thursday : 10:00AM ~ 06:00PM<br>
+      Friday : 09:00AM ~ 05:00PM<br>
+      Break Time : 12:00PM ~ 01:00PM<br>
+      Closed on weekends/holidays
+    </div>
+  </div>
 </body>
 
 </html>

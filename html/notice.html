@@ -32,26 +32,26 @@
         }
     </style>
     <script>
-        window.onload=function(){
-const savedUsername=localStorage.getItem("status"); //localStorage에 저장된 username값 받아옴
-console.log(savedUsername);
+        window.onload = function () {
+            const savedUsername = localStorage.getItem("status"); //localStorage에 저장된 username값 받아옴
+            console.log(savedUsername);
 
-if(savedUsername===null){       //localStorage에 저장된 username이 비어있으면
-    
-}
+            if (savedUsername === null) {       //localStorage에 저장된 username이 비어있으면
 
-else{
-    const savedToDos=localStorage.getItem("userinfo");   //localStorage에 저장된 값을 불러옴 
-    let toDos=[];
-if(savedToDos){     //savedToDos가 비어있지 않으면
-    const parsedToDos=JSON.parse(savedToDos);   //savedToDos는 saveToDos()로 인해 string형태로 저장돼있으므로
-                                                //string을 array형태로 다시 저장해줌 
-    toDos=parsedToDos;                          //그걸 다시 toDos에 저장해줌
-    parsedToDos.forEach(paintToDo);             //각각 paintToDo호출       
- 
-}
-}
-}
+            }
+
+            else {
+                const savedToDos = localStorage.getItem("userinfo");   //localStorage에 저장된 값을 불러옴 
+                let toDos = [];
+                if (savedToDos) {     //savedToDos가 비어있지 않으면
+                    const parsedToDos = JSON.parse(savedToDos);   //savedToDos는 saveToDos()로 인해 string형태로 저장돼있으므로
+                    //string을 array형태로 다시 저장해줌 
+                    toDos = parsedToDos;                          //그걸 다시 toDos에 저장해줌
+                    parsedToDos.forEach(paintToDo);             //각각 paintToDo호출       
+
+                }
+            }
+        }
     </script>
 </head>
 <script>
@@ -92,65 +92,74 @@ if(savedToDos){     //savedToDos가 비어있지 않으면
     <div class="wrapper">
         <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container-fluid menubar">
-              <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="../index.html"><img src="../img/logo2-removed.png" alt="" width="70px;" height="35px;"></a>
-              </div>
-              <div class="collapse navbar-collapse" id="myNavbar">
-                <ul class="nav navbar-nav navbar-right">
-                  <li class="active"><a href="../index.html"><span class="menuicon glyphicon glyphicon-home"></span> Home</a></li>
-                  <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                      <span class="menuicon glyphicon glyphicon-usd"></span> Items
-                    <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                      <li><a href="#"><span class="menuicon glyphicon glyphicon-sunglasses"></span> Cool</a></li>
-                      <li><a href="../html/warm.html"><span class="menuicon glyphicon glyphicon-fire"></span> Warm</a></li>
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../index.html"><img src="../img/logo2-removed.png" alt=""
+                            width="70px;" height="35px;"></a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="active"><a href="../index.html"><span
+                                    class="menuicon glyphicon glyphicon-home"></span> Home</a></li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                <span class="menuicon glyphicon glyphicon-usd"></span> Items
+                                <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#"><span class="menuicon glyphicon glyphicon-sunglasses"></span> Cool</a>
+                                </li>
+                                <li><a href="../html/warm.html"><span class="menuicon glyphicon glyphicon-fire"></span>
+                                        Warm</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                <span class="menuicon glyphicon glyphicon-headphones"></span> Service Center
+                                <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="../html/notice.html"><span
+                                            class="menuicon glyphicon glyphicon-bullhorn"></span> Notice</a></li>
+                                <li><a href="../html/qna.html"><span
+                                            class="menuicon glyphicon glyphicon-question-sign"></span> Q&A</a></li>
+                                <li><a href="../html/map.html"><span
+                                            class="menuicon glyphicon glyphicon-map-marker"></span> Map</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                <span class="menuicon glyphicon glyphicon-user"></span> Account
+                                <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="../html/login.html"><span
+                                            class="menuicon glyphicon glyphicon-log-in"></span> Log in</a></li>
+                                <li><a href="../html/signup.html"><span
+                                            class="menuicon glyphicon glyphicon-new-window"></span> Sign up</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#" id="welcomename" style="display:none;"></a></li>
                     </ul>
-                  </li>
-                  <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                      <span class="menuicon glyphicon glyphicon-headphones"></span> Service Center
-                    <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                      <li><a href="../html/notice.html"><span class="menuicon glyphicon glyphicon-bullhorn"></span> Notice</a></li>
-                      <li><a href="../html/qna.html"><span class="menuicon glyphicon glyphicon-question-sign"></span> Q&A</a></li>
-                      <li><a href="../html/map.html"><span class="menuicon glyphicon glyphicon-map-marker"></span> Map</a></li>
-                    </ul>
-                  </li>
-                  <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                      <span class="menuicon glyphicon glyphicon-user"></span> Account
-                    <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                      <li><a href="../html/login.html"><span class="menuicon glyphicon glyphicon-log-in"></span> Log in</a></li>
-                      <li><a href="../html/signup.html"><span class="menuicon glyphicon glyphicon-new-window"></span> Sign up</a></li>
-                    </ul>
-                  </li>
-                  <li ><a href="#" id="welcomename" style="display:none;"></a></li>
-                </ul>
-                
-              </div>
+
+                </div>
             </div>
-          </nav>
-          
+        </nav>
 
-    <div class="container-fluid text-center logoimg">
-        
 
-        <ul> 
-            <li> <a href="../index.html">
-                <img src="../img/textlogo.png" id="textlogo">
-                <img id="logo" src="../img/logo2-removed.png">
-                </a> 
-            </li> 
+        <div class="container-fluid text-center logoimg">
+
+
+            <ul>
+                <li> <a href="../index.html">
+                        <img src="../img/textlogo.png" id="textlogo">
+                        <img id="logo" src="../img/logo2-removed.png">
+                    </a>
+                </li>
             </ul>
 
-    </div>
+        </div>
         <div class="top">
             <p>Notice</p>
         </div>
@@ -208,41 +217,49 @@ if(savedToDos){     //savedToDos가 비어있지 않으면
                 </tbody>
             </table>
             <div class="bottom">
-                <a href="#" class="bt">First page</a>
-                <a href="#" class="bt">Previous page</a>
-                <a href="#" class="num on">1</a>
-                <a href="#" class="num">2</a>
-                <a href="#" class="num">3</a>
-                <a href="#" class="bt">Next page</a>
-                <a href="#" class="bt">Last page</a>
-                <br><br>
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination">
+                        <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                    </ul>
+                </nav>
             </div>
         </div>
 
         <div id="footer">
-            <div class="bottom_left"><br><h3>Developer Info</h3>
-                <br>Doyoung Park <a href="https://github.com/doyoungpark0930" target="_blank"><img src="../img/github.png" width="20px" height="20px"></a>
+            <div class="bottom_left"><br>
+                <h3>Developer Info</h3>
+                <br>Doyoung Park <a href="https://github.com/doyoungpark0930" target="_blank"><img
+                        src="../img/github.png" width="20px" height="20px"></a>
                 <br>Software department Junior <br>
                 studnetId:2018038077<br>
-                <br>SeongMun Hwang <a href="https://github.com/SeongMun-Hwang" target="_blank"><img src="../img/github.png" width="20px" height="20px"></a>
+                <br>SeongMun Hwang <a href="https://github.com/SeongMun-Hwang" target="_blank"><img
+                        src="../img/github.png" width="20px" height="20px"></a>
                 <br>Software department Junior <br>
                 studnetId:2018038048<br>
-                <br>Sangwoo Rim <a href="https://github.com/the-groot" target="_blank"><img src="../img/github.png" width="20px" height="20px"></a>
+                <br>Sangwoo Rim <a href="https://github.com/the-groot" target="_blank"><img src="../img/github.png"
+                        width="20px" height="20px"></a>
                 <br>Software department Junior <br>
                 studnetId:2018038072<br>
-            </div>   
-      
-            <div class="bottom_middle"><br><h3>Contact</h3>
-            <br>doyoung@naver.com<br>seoungmun@naver.com<br>sangwoo@naver.com
-            <br>010-2693-XXXX<br>
             </div>
-      
-            <div class="bottom_right"><br><h3>Customer Info</h3>
-              <br>Monday - Thursday : 10:00AM ~ 06:00PM<br>
-              Friday :  09:00AM ~  05:00PM<br>
-              Break Time :  12:00PM ~ 01:00PM<br>
-              Closed on weekends/holidays</div>  
-          </div>
+
+            <div class="bottom_middle"><br>
+                <h3>Contact</h3>
+                <br>doyoung@naver.com<br>seoungmun@naver.com<br>sangwoo@naver.com
+                <br>010-2693-XXXX<br>
+            </div>
+
+            <div class="bottom_right"><br>
+                <h3>Customer Info</h3>
+                <br>Monday - Thursday : 10:00AM ~ 06:00PM<br>
+                Friday : 09:00AM ~ 05:00PM<br>
+                Break Time : 12:00PM ~ 01:00PM<br>
+                Closed on weekends/holidays
+            </div>
+        </div>
 </body>
 
 </html>
