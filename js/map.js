@@ -38,19 +38,19 @@ function myMap() {
     }
     marker[0].addListener('click', () => {
         map.setZoom(18);
-        map.panTo(markerdata[0]);
+        map.setCenter(markerdata[0]);
         show_explain(0);
         value=0;
     });
     marker[1].addListener('click', () => {
         map.setZoom(18);
-        map.panTo(markerdata[1]);
+        map.setCenter(markerdata[1]);
         show_explain(1);
         value=1;
     });
     marker[2].addListener('click', () => {
         map.setZoom(18);
-        map.panTo(markerdata[2]);
+        map.setCenter(markerdata[2]);
         show_explain(2);
         value=2;
     });
@@ -147,7 +147,7 @@ function left(){
     x[1].innerHTML = locate_info[value][3];
     x[2].innerHTML = locate_info[value][4];
     x[3].innerHTML = locate_info[value][5];
-    map.panTo(18);
+    map.setCenter(18);
     map.setCenter(markerdata[value]);
 }
 
@@ -168,6 +168,6 @@ function right(){
     x[1].innerHTML = locate_info[value][3];
     x[2].innerHTML = locate_info[value][4];
     x[3].innerHTML = locate_info[value][5];
-    map.panTo(18);
+    map.setCenter(18);
     map.setCenter(markerdata[value]);
 }
