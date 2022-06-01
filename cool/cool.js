@@ -223,64 +223,64 @@ function InitializeItemValue(ItemIndex)
 
   switch (ItemIndex) {
     case 1:
-        ItemPrice.innerHTML=45000+'원';
-        itemName.innerHTML="부들부들 핑크패딩";
+        ItemPrice.innerHTML=25000+'원';
+        itemName.innerHTML="린넨6부팬츠";
         break;
     case 2:
-        ItemPrice.innerHTML=30000+'원';
-        itemName.innerHTML="스노우 코트";
+        ItemPrice.innerHTML=20000+'원';
+        itemName.innerHTML="베베키즈 세트";
         break;
     case 3:
-        ItemPrice.innerHTML=27000+'원';
-        itemName.innerHTML="뽀글이 풀 집업";
+        ItemPrice.innerHTML=23000+'원';
+        itemName.innerHTML="빌리진 베이비 세트";
           break;
     case 4:
-        ItemPrice.innerHTML=35700+'원';
-        itemName.innerHTML="초겨울 니트 세트";
+        ItemPrice.innerHTML=15000+'원';
+        itemName.innerHTML="디즈니 웜티";
         break;
     case 5:
-        ItemPrice.innerHTML=33800+'원';
-        itemName.innerHTML="베이스볼 롱후리스";
+        ItemPrice.innerHTML=23800+'원';
+        itemName.innerHTML="노란호랭이 웜티";
         break;
     case 6:
         ItemPrice.innerHTML=28500+'원';
-        itemName.innerHTML="데일리 세일라방";
+        itemName.innerHTML="스마일 반팔슈트";
           break;
     case 7:
-        ItemPrice.innerHTML=31500+'원';
-        itemName.innerHTML="스노우 아노락&팬츠";
+        ItemPrice.innerHTML=21500+'원';
+        itemName.innerHTML="표정공룡 반팔슈트";
         break;
     case 8:
-        ItemPrice.innerHTML=27000+'원';
-        itemName.innerHTML="뽀글이밑단 청바지 (수입)";
+        ItemPrice.innerHTML=17000+'원';
+        itemName.innerHTML="꽃앞치마 여름슈트";
         break;
     case 9:
-        ItemPrice.innerHTML=8000+'원';
-        itemName.innerHTML="얼룩무늬 빈티지 양말";
+        ItemPrice.innerHTML=27000+'원';
+        itemName.innerHTML="프릴카라체리 반팔슈트";
           break;
     case 10:
-        ItemPrice.innerHTML=56000+'원';
-        itemName.innerHTML="하트누빔케이프 롱패딩";
+        ItemPrice.innerHTML=9900+'원';
+        itemName.innerHTML="크림사탕 반팔슈트";
         break;
     case 11:
-        ItemPrice.innerHTML=49500+'원';
-        itemName.innerHTML="미니멜 후드 롱패딩";
+        ItemPrice.innerHTML=20900+'원';
+        itemName.innerHTML="도날드초록 여름슈트";
         break;
     case 12:
-        ItemPrice.innerHTML=37800+'원';
-        itemName.innerHTML="반넥폴라 부클티";
+        ItemPrice.innerHTML=17800+'원';
+        itemName.innerHTML="베어투미 반팔슈트";
           break;
     case 13:
         ItemPrice.innerHTML=27200+'원';
-        itemName.innerHTML="아기 털신발 아이보리&베이지";
+        itemName.innerHTML="곰시원끈 슈트,모자세트";
         break;
     case 14:
-        ItemPrice.innerHTML=31500+'원';
-        itemName.innerHTML="아동 주니어 양특기모 상하복";
+        ItemPrice.innerHTML=21500+'원';
+        itemName.innerHTML="오렌지네모노랑티/원피스";
         break;
     case 15:
-        ItemPrice.innerHTML=28000+'원';
-        itemName.innerHTML="하나비아 겨울신상";
+        ItemPrice.innerHTML=18000+'원';
+        itemName.innerHTML="루시르베이비";
           break;
     default:
       ItemPrice.innerHTML=100+'원';
