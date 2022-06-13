@@ -8,12 +8,12 @@ $(document).ready(function () {
 var product_number=0;
 
 var product_data=[
-    ["../warm.img/cloth1_1.png",".cloth1_1","1"],
-    ["../warm.img/cloth1_2.png",".cloth1_2","2"],
-    ["../warm.img/cloth3_1.png",".cloth1_3","3"],
-    ["",".cloth1_4","4"],
-    ["",".cloth1_5","5"],
-    ["",".cloth1_6","6"],
+    ["../warm.img/cloth1_1.png",".cloth1_1","17000"],
+    ["../warm.img/cloth2_1.png",".cloth1_2","21000"],
+    ["../warm.img/cloth3_1.png",".cloth1_3","11000"],
+    ["../cool.img/cloth1_1.png",".cloth1_4","30000"],
+    ["../cool.img/cloth1_2.png",".cloth1_5","37000"],
+    ["../cool.img/cloth1_3.png",".cloth1_6","29000"],
 ]
 
 //호출한 태그의 클래스값 저장
@@ -130,7 +130,7 @@ function add_total(n){
     var y=document.getElementsByClassName("delivery_price");
     var z=document.getElementsByClassName("total_price");
     x[0].innerHTML=Number(x[0].innerHTML)+Number(product_data[n][2]);
-    if(Number(x[0].innerHTML)>20){
+    if(Number(x[0].innerHTML)>50000){
         y[0].innerHTML=0;
     }
     z[0].innerHTML=Number(x[0].innerHTML)+Number(y[0].innerHTML);
@@ -142,11 +142,11 @@ function minus_total(n){
     var z=document.getElementsByClassName("total_price");
 
     x[0].innerHTML=Number(x[0].innerHTML)-Number(product_data[n][2]);
-    if(Number(x[0].innerHTML)<=20){
-        y[0].innerHTML=10;
+    if(Number(x[0].innerHTML)<=50000){
+        y[0].innerHTML=5000;
     }
     z[0].innerHTML=Number(x[0].innerHTML)+Number(y[0].innerHTML);
     if(Number(x[0].innerHTML)==0){
-        z[0].innerHTML=Number(z[0].innerHTML)-10;
+        z[0].innerHTML=Number(z[0].innerHTML)-5000;
     }
 }
